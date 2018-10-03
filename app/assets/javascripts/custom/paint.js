@@ -11,7 +11,7 @@ function OilPainting(){
 	var dist = {x: 0, y: 0};
 	// var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
 	var colour = '#fff';
-  var pallete = ['F6DAF7', 'FFF', "E3AFE5"];
+  var pallete = ['F6DAF7', 'E77EE2', 'FFF'];
 
 
 	this.initialize = function(){
