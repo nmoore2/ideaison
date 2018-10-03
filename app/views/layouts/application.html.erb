@@ -1,20 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Ideaison" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Ideaison" %>">
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
+
+    <!-- SOCIAL MEDIA META -->
+    <meta property="og:description" content="Ideaison">
+    <meta property="og:image" content="<%= image_url('logos/ideaison-white-bg.jpg') %>">
+    <meta property="og:site_name" content="Ideaison">
+    <meta property="og:title" content="Ideaison">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ideaison.com">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Ideaison">
+    <meta name="twitter:creator" content="Lauren Kashuk">
+    <meta name="twitter:title" content="Ideaison">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="<%= image_url('logos/ideaison-white-bg.jpg') %>">
+
+    <!-- CSS FILES -->
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+    <div class="preloader">
+      <svg class="spinner" viewBox="0 0 50 50">
+        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+      </svg>
+    </div>
+    <!-- end preloader -->
+    <div class="transition-overlay"></div>
+    <!-- end transition-overlay -->
+
+    <%= render 'layouts/navigation' %>
+
+     <%= yield %>
+
+    <%= javascript_include_tag 'application' %>
+    <script>
+    	// PRELOADER
+    		(function($) {
+    			$(window).on('load', function(){
+    				$("body").addClass("page-loaded");
+    			});
+    		})(jQuery)
+    </script>
   </body>
 </html>

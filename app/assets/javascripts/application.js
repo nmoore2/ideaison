@@ -14,4 +14,7 @@
 //= require popper
 //= require rails-ujs
 //= require bootstrap-sprockets
-//= require_tree .
+
+//= require_tree ./vendor
+//= require_tree ./theme
+//= require_tree ./custom

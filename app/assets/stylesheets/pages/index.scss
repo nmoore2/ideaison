@@ -1,0 +1,17 @@
+.header {
+  height: auto;
+  background-color: $pink;
+}
+
+.preloader {
+  background-color: #fff;
+  .spinner {
+    .path {
+      stroke: $pink;
+    }
+  }
+}
+
+.paint-canvas {
+  background: $pink;
+}
