@@ -14,4 +14,12 @@
 
 .paint-canvas {
   background: $pink;
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
 }

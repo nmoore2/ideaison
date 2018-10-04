@@ -1,6 +1,5 @@
 {
   "name": "ideaison",
   "private": true,
-  "dependencies": {},
-  "start": "node index.js"
+  "dependencies": {}
 }
