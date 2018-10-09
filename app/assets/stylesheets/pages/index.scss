@@ -38,3 +38,10 @@
   position: fixed;
   transform: translateX(-50%) translateY(-50%);
 }
+
+.side-content {
+  h3 {
+    color: #ce2cc9;
+    -webkit-text-fill-color: initial;
+  }
+}

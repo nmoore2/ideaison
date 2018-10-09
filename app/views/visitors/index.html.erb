@@ -1,20 +1,60 @@
 
 <div class="inner">
-<canvas id='canvas' class="paint-canvas"></canvas>
-    <div id="mouse-message" style="position: absolute; color: white;">
-       Click to paint
-    </div>
-<div class="text-overlay">
+  <canvas id='canvas' class="paint-canvas"></canvas>
+  <div id="mouse-message" style="position: absolute; color: white;">
+     Click to paint
+  </div>
+  <div class="text-overlay">
     <h2>YOUR IDEA LIASIONS</h2>
     <!-- <p>
       Pron: eye-dee-azon
     </p> -->
     <p>We bring compelling ideas to life by connecting people together.</p>
     <a href="#" class="cta-btn hvr-radial-out">Learn More</a>
-
   </div>
-
 </div>
 
-
-<!-- end inner -->
+<section class="side-image-content">
+  <div class="side-image">
+    <div class="left">
+      <div class="reveal-effect se2-white wow" data-aos="slide-effect">
+        <%= image_tag 'home/420-vocalist.jpg' %>
+      </div>
+      <!-- end slide-effect -->
+      <div class="reveal-effect se2-white wow small-image" data-aos="slide-effect">
+        <!-- <img src="images/image2.jpg" alt="Image">  -->
+        <%= image_tag 'home/bliss-lounge-lauren.jpg' %>
+      </div>
+      <!-- end slide-effect -->
+    </div>
+    <!-- end left -->
+    <div class="right">
+      <div class="reveal-effect se2-white wow" data-aos="slide-effect">
+        <%= image_tag 'home/she-said-so-ums.jpg' %>
+      </div>
+      <!-- end slide-effect -->
+    </div>
+    <!-- end right -->
+  </div>
+  <!-- end side-image -->
+  <div class="side-content">
+    <div class="titles"> <span class="title-bg" style="background-image: url(<%= image_path('paint/title-bg.png') %>)"></span>
+      <h3>ABOUT IDEAISON</h3>
+    </div>
+    <!-- end titles -->
+    <p>Interactive digital experiences are continually becoming <u>more amazing</u> and <u>more complex</u> to produce. Our team is specially designed to create successful, custom, innovative digital products from the initial concept through full product launch.</p>
+    <p>Strategists, researchers, product managers, <strong>UX/UI designers</strong>, technologists, web and mobile developers all working together, dedicated to your brand and your product. Talk To Our Team.</p>
+    <a href="#" class="ghost-btn">
+    <svg>
+      <defs>
+        <linearGradient id="grad1">
+          <stop offset="0%" stop-color="#FF8282"/>
+          <stop offset="100%" stop-color="#E178ED" />
+        </linearGradient>
+      </defs>
+      <rect width="206" height="50" x="5" y="5" rx="25" fill="none" stroke="url(#grad1)"></rect>
+    </svg>
+    <span>Learn More +</span> </a> </div>
+  <!-- end side-content -->
+</section>
+<!-- end side-image-content -->
