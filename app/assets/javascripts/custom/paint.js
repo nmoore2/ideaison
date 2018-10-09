@@ -1,3 +1,16 @@
+var $mouseMessage = $('#mouse-message');
+
+//detectmousedrag
+var isDragging = false;
+$('#canvas')
+.mousedown(function() {
+  isDragging = true;
+})
+.mouseup(function() {
+  isDragging = false;
+});
+
+// oil painting
 function OilPainting(){
 
   var canvas;
@@ -24,13 +37,22 @@ function OilPainting(){
 		canvas.width = width;
 		canvas.height = height;
 
+    $mouseMessage.fadeIn('slow');
+
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('click', MouseDown, false);
 		canvas.addEventListener('dblclick', MouseDbl, false);
+
 	}
 
 
 	var MouseMove = function(e) {
+
+  $('#mouse-message').css({
+    left:  e.pageX + 60,
+    top:   e.pageY + 30
+  });
+
 		var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
 								 Math.pow(prevPos.y - startPos.y, 2));
 
@@ -50,6 +72,9 @@ function OilPainting(){
 		prevPos.y = (e.layerY);
 
 	   // ------- Draw -------
+     var draw = function() {
+     $mouseMessage.fadeOut('fast');
+
 	   var lWidth = (Math.random()+20/10-0.5)*size+(1-Math.random()+30/20-0.5)*size;
 	   context.lineWidth = lWidth;
 	   context.strokeWidth = lWidth;
@@ -71,7 +96,14 @@ function OilPainting(){
 	   context.fill();
 
 	   context.closePath();
-	}
+   }
+   if (isDragging) {
+     draw();
+     $mouseMessage.hide();
+   } else {
+   }
+ };
+
 
   var counter = 0;
 
@@ -84,8 +116,6 @@ function OilPainting(){
       counter += 1;
     }
     colour = '#' + pallete[counter];
-    console.log(pallete[counter]);
-		// colour = '#'+Math.floor(Math.random()*16777215).toString(16);
 		context.fillStyle = colour;
 	    context.strokeStyle = colour;
 	}
@@ -93,7 +123,13 @@ function OilPainting(){
 	var MouseDbl = function(e) {
 		e.preventDefault();
 		context.clearRect(0, 0, width, height);
+    $mouseMessage.fadeIn('slow');
 	}
+
+  $('#canvas').mouseleave(function() {
+    // $mouseMessage.fadeOut('fast');
+  })
+
 
 }
 

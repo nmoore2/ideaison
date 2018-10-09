@@ -19,4 +19,14 @@
 @import "vendor/*";
 @import "utils/*";
 @import "theme/*";
+@import "shared/*";
 @import "pages/*";
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+font-size: 38px;
+}
+
+p, a {
+  font-family: 'Source Sans Pro', sans-serif;
+}
