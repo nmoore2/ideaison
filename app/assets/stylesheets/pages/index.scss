@@ -1,19 +1,7 @@
-.header {
-  height: auto;
-  background-color: $pink;
-}
-
-.preloader {
-  background-color: #fff;
-  .spinner {
-    .path {
-      stroke: $pink;
-    }
-  }
-}
-
 .paint-canvas {
-  background: $pink;
+  // background: $pink;
+  background: asset-url('bg/splatterbackground.jpg') no-repeat center center;
+  background-size: cover;
   position: relative;
 }
 
