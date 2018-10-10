@@ -1,6 +1,9 @@
+.inner {
+  background: asset-url('bg/splatterbackground.jpg') no-repeat center center;
+  
+}
 .paint-canvas {
   // background: $pink;
-  background: asset-url('bg/splatterbackground.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
 }
