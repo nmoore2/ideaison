@@ -1,6 +1,6 @@
 .inner {
   background: asset-url('bg/splatterbackground.jpg') no-repeat center center;
-  
+
 }
 .paint-canvas {
   // background: $pink;
@@ -34,5 +34,35 @@
   h3 {
     color: #ce2cc9;
     -webkit-text-fill-color: initial;
+  }
+}
+
+.main-features {
+  background: $pink;
+  .title-bg {
+    opacity: 0.5;
+  }
+  .titles {
+    margin-bottom: 20px;
+  }
+  .feature-box {
+    background: #fff;
+    min-height: 350px;
+    h5 {
+      color: $pink;
+      text-transform: uppercase;
+    }
+    p, ul li a {
+      color: black;
+    }
+    figure {
+      height: auto;
+      img {
+        width: 80px;
+      }
+    }
+    .more-link:after {
+      border-color: transparent transparent #E77EE2 transparent;
+    }
   }
 }
