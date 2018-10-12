@@ -10,6 +10,8 @@ p, a {
 .titles h3 {
   font-size: 45px;
   letter-spacing: 1px;
+  color: $pink;
+  -webkit-text-fill-color: initial;
 }
 
 p {
