@@ -19,12 +19,15 @@ p {
 }
 
 .preloader {
-  background-color: #fff;
+  background-color: $pink;
   .spinner {
     .path {
-      stroke: $pink;
+      stroke: #fff;
     }
   }
+}
+.transition-overlay {
+  background: $pink;
 }
 
 
