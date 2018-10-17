@@ -95,3 +95,39 @@
     }
   }
 }
+
+.quote-bar {
+  background: $pink;
+}
+
+.recent-news .news-box .news-content {
+   a {
+    color: $pink !important;
+    &:before, &:after {
+      background: $pink;
+    }
+  }
+  h3 {
+    background: linear-gradient(135deg, $pink 0%, $dark-pink 100%);
+    -webkit-background-clip: text;
+  }
+}
+.footer {
+  background-color: rgb(181,181,181);
+  p {
+    color: #000;
+    font-size: 16px;
+  }
+  li a, small {
+    color: #000;
+  }
+  small {
+    font-size: 13px;
+  }
+  .social-icons {
+    margin: 20px 0;
+    i {
+      color: #000;
+    }
+  }
+}

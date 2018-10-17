@@ -24,7 +24,8 @@
         font-size: 15px;
         letter-spacing: 0.5px;
         &:hover {
-          color: #000;
+          color: #fff;
+          text-shadow: 1px 1px #000;
         }
       }
     }
@@ -51,6 +52,7 @@
             color: $pink;
             &:hover {
               color: black;
+              text-shadow: none;
             }
           }
         }
