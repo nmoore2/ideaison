@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   </head>
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
     <div class="preloader">
       <svg class="spinner" viewBox="0 0 50 50">
         <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
@@ -45,6 +45,30 @@
      <%= yield %>
 
    <%= render 'shared/footer' %>
+   <div class="portfolio-item">
+     <div class="container">
+       <div class="row">
+         <div class="col-7">
+           <div class="portfolio-images">
+           <%= image_tag 'home/420-headliner.jpg' %>
+           <%= image_tag 'home/420-headliner.jpg' %>
+           <%= image_tag 'home/420-headliner.jpg' %>
+         </div>
+         </div>
+         <div class="col-5">
+           <div class="text-side">
+             <h1>Some text here</h1>
+             <p>
+               Some more text here
+             </p>
+           </div>
+
+         </div>
+       </div>
+     </div>
+     <span class="close-icon">X</span>
+   </div>
+
     <%= javascript_include_tag 'application' %>
     <script>
     	// PRELOADER
@@ -54,5 +78,6 @@
     			});
     		})(jQuery)
     </script>
+
   </body>
 </html>

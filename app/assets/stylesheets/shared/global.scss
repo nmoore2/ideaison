@@ -1,8 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 38px;
 }
 
+h1 {
+}
+h2 {
+  font-size: 38px;
+}
 p, a {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -55,4 +59,25 @@ p {
   .title-bg {
     background-image: asset-url('paint/title-bg.png');
   }
+}
+
+.page-title {
+  background-color: $dark-pink;
+  text-align:center;
+  padding: 125px 0 50px;
+  h2, h6 {
+    color: #fff;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  h6 {
+    font-size: 16px;
+  }
+}
+
+.icon-check {
+  height: 13px;
+  margin-right: 15px;
 }

@@ -4,4 +4,16 @@ class VisitorsController < ApplicationController
 
   end
 
+  def about
+
+  end
+
+  def services
+
+  end
+
+  def portfolio
+
+  end
+
 end

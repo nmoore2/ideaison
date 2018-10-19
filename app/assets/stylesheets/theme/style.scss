@@ -255,21 +255,20 @@ button[type="submit"] { height: 52px; display: inline-block; border: none; backg
 .main-features .feature-box ul li a img { width: 12px; margin-right: 4px; }
 
 /* SERVICES */
-.services { width: 100%; display: flex; padding: 100px 0; }
-.services .service-box { width: 100%; padding: 50px 40px; box-shadow: 5px 20px 50px 5px rgba(0, 0, 0, 0.1); position: relative; color: #fff; -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out; background: url(../images/polygon-bg.svg) center no-repeat; background-size: cover; margin-bottom: 30px; }
-.services .service-box:hover { box-shadow: 5px 20px 50px 5px rgba(0, 0, 0, 0.3); }
-.services .service-box figure { width: 60px; float: left; margin-right: 20px; margin-bottom: 30px; }
-.services .service-box figure img { width: 60px; }
-.services .service-box span { width: 1px; height: 80px; float: left; margin-right: 20px; background: #fff; opacity: 0.3; }
-.services .service-box h5 { font-weight: 600; margin-bottom: 20px; font-size: 13px; }
-.services .service-box p { line-height: 22px; font-size: 14px; margin: 0; }
-.services .service-box .more-link { width: 37px; height: 37px; text-align: right; font-size: 17px; color: #fff; position: absolute; right: -4px; bottom: -4px; z-index: 2; line-height: 50px; padding-right: 5px; }
-.services .service-box .more-link:hover { text-decoration: none; }
-.services .service-box .more-link:after { content: ""; width: 0; height: 0; border-style: solid; border-width: 0 0 37px 37px; border-color: transparent transparent #57c199 transparent; position: absolute; right: 0; bottom: 0; z-index: -1; }
-.services .service-box ul { width: 100%; margin-top: 20px; margin-bottom: 0; padding: 0; padding-left: 100px; display: none; }
-.services .service-box ul li { width: 100%; margin-bottom: 4px; padding: 0; list-style: none; font-weight: 600; font-size: 12px; }
-.services .service-box ul li a { color: #fff; }
-.services .service-box ul li a img { width: 12px; margin-right: 4px; }
+.services-wrapper .service-box { width: 100%; padding: 50px 40px; box-shadow: 5px 20px 50px 5px rgba(0, 0, 0, 0.1); position: relative; color: #fff; -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out; background: url(../images/polygon-bg.svg) center no-repeat; background-size: cover; margin-bottom: 30px; }
+.services-wrapper .service-box:hover { box-shadow: 5px 20px 50px 5px rgba(0, 0, 0, 0.3); }
+.services-wrapper .service-box figure { width: 60px; float: left; margin-right: 20px; margin-bottom: 30px; }
+.services-wrapper .service-box figure img { width: 60px; }
+.services-wrapper .service-box span { width: 1px; height: 80px; float: left; margin-right: 20px; background: #fff; opacity: 0.3; }
+.services-wrapper .service-box h5 { font-weight: 600; margin-bottom: 20px; font-size: 13px; }
+.services-wrapper .service-box p { line-height: 22px; font-size: 14px; margin: 0; }
+.services-wrapper .service-box .more-link { width: 37px; height: 37px; text-align: right; font-size: 17px; color: #fff; position: absolute; right: -4px; bottom: -4px; z-index: 2; line-height: 50px; padding-right: 5px; }
+.services-wrapper .service-box .more-link:hover { text-decoration: none; }
+.services-wrapper .service-box .more-link:after { content: ""; width: 0; height: 0; border-style: solid; border-width: 0 0 37px 37px; border-color: transparent transparent #57c199 transparent; position: absolute; right: 0; bottom: 0; z-index: -1; }
+.services-wrapper .service-box ul { width: 100%; margin-top: 20px; margin-bottom: 0; padding: 0; padding-left: 100px; display: none; }
+.services-wrapper .service-box ul li { width: 100%; margin-bottom: 4px; padding: 0; list-style: none; font-weight: 600; font-size: 12px; }
+.services-wrapper .service-box ul li a { color: #fff; }
+.services-wrapper .service-box ul li a img { width: 12px; margin-right: 4px; }
 
 /* FEEDING CODDLE */
 .feeding-coddle { width: 100%; display: flex; text-align: center; padding: 60px 0; background: #f1f5fd; color: #99a4be; }
