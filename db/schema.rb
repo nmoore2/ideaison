@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_03_015213) do
+ActiveRecord::Schema.define(version: 2018_10_25_051202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "photo"
+    t.integer "portfolio_id"
+    t.text "caption"
+    t.integer "placement"
+    t.string "image_type"
+    t.string "video_url"
+  end
+
+  create_table "portfolios", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "description"
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_1"
+    t.string "image_2"
+    t.string "image_3"
+    t.string "image_4"
+    t.string "image_5"
+    t.string "video_url"
+    t.string "thumbnail"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

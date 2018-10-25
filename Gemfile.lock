@@ -50,6 +50,7 @@ GEM
     ast (2.4.0)
     autoprefixer-rails (9.1.4)
       execjs
+    aws_cf_signer (0.1.3)
     bcrypt (3.1.12)
     better_errors (2.5.0)
       coderay (>= 1.0.0)
@@ -71,11 +72,24 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
+    carrierwave (1.2.3)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (2.1.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
+    cloudinary (1.9.1)
+      aws_cf_signer
+      rest-client
+    cocaine (0.6.0)
+      terrapin (= 0.6.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -94,6 +108,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    domain_name (0.5.20180417)
+      unf (>= 0.0.5, < 1.0.0)
     erubi (1.7.1)
     execjs (2.7.0)
     factory_bot (4.11.1)
@@ -106,11 +122,16 @@ GEM
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
+    file_validators (2.3.0)
+      activemodel (>= 3.2)
+      mime-types (>= 1.0)
     foreman (0.85.0)
       thor (~> 0.19.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     hub (1.12.4)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
@@ -143,7 +164,11 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
+    mime-types (3.2.2)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2018.0812)
     mimemagic (0.3.2)
+    mini_magick (4.9.2)
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -151,6 +176,7 @@ GEM
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    netrc (0.11.0)
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
@@ -213,6 +239,10 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.1)
@@ -255,6 +285,9 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    simple_form (4.0.1)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -269,6 +302,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    terrapin (0.6.0)
+      climate_control (>= 0.0.3, < 1.0)
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -276,6 +311,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.19)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.5)
     unicode-display_width (1.4.0)
     warden (1.2.7)
       rack (>= 1.0)
@@ -299,12 +337,16 @@ DEPENDENCIES
   bootstrap (~> 4.1.2)
   byebug
   capybara (>= 2.15)
+  carrierwave
   chromedriver-helper
+  ckeditor
+  cloudinary
   coffee-rails (~> 4.2)
   database_cleaner
   devise
   factory_bot_rails
   faker
+  file_validators
   foreman
   hub
   jbuilder (~> 2.5)
@@ -312,6 +354,7 @@ DEPENDENCIES
   launchy
   linkedin-oauth2 (~> 1.0)
   listen (>= 3.0.5, < 3.2)
+  mini_magick
   pg
   pry-rails
   pry-rescue
@@ -322,6 +365,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)

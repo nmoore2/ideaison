@@ -18,3 +18,4 @@
 //= require_tree ./vendor
 //= require_tree ./theme
 //= require_tree ./custom
+//= require ckeditor/init

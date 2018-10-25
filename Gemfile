@@ -9,6 +9,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "linkedin-oauth2", "~> 1.0"
+gem 'simple_form'
+gem 'ckeditor'
+gem 'carrierwave'
+gem "mini_magick"
+gem 'cloudinary'
+gem 'file_validators'
+
 
 
 group :development, :test do

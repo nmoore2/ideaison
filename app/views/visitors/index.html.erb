@@ -190,145 +190,38 @@
     <li><a href="#" data-filter=".development">DEVELOPMENT</a> </li>
   </ul>
   <ul class="works-grid">
+    <% @portfolios.each do |item| %>
     <li class="webuiux">
       <div class="coddle__box launch-lightbox">
         <figure class="coddle__box__figure">
           <div class="reveal-effect se2-white wow" data-aos="slide-effect">
-            <%= image_tag 'portfolio/420-crowd.jpg'  %>
+            <%= image_tag item.thumbnail.url, class: 'img-fluid'  %>
           </div>
           <div class="coddle__box__deco coddle__box__deco--shine">
             <div></div>
           </div>
           <figcaption class="coddle__box__caption">
             <h4 class="coddle__box__title">
-              420 On the Block
+              <%= item.title %>
             </h4>
             <p class="coddle__box__description">MUSIC FESTIVAL</p>
           </figcaption>
         </figure>
         <div class="item-data" style="display: none;">
           <div class="item-images">
-            <%= image_tag 'home/420-vocalist.jpg', class: 'port-img' %>
-            <%= image_tag 'home/bliss-lounge-lauren.jpg', class: 'port-img' %>
+            <% item.images.each do |image| %>
+              <%= image_tag image.photo_url, class: 'img-fluid' %>
+            <% end %>
           </div>
-          <div class="item-text" data-title="<h1>420 On the Block</h1>" data-description="<p>
-            This is the description of 420 on the block
-          </p>">
-
+          <div class="item-text"
+            data-title="<%= item.title %>"
+            data-description="<%= item.description %>">
           </div>
         </div>
       </div>
       <!--end coddle__box -->
     </li>
-    <li class="mobileapps">
-      <div class="coddle__box">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect">
-            <img class="coddle__box__image" src="<%= image_path('isolayer1.jpg') %>" alt="Image" />
-          </div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title">
-              <a href="images/isolayer2.jpg" data-fancybox>420 OTB</a>
-            </h4>
-            <p class="coddle__box__description">DIGITAL CREATION UI-UX</p>
-          </figcaption>
-        </figure>
-      </div>
-      <!--end coddle__box -->
-
-    </li>
-    <li class="development">
-      <div class="coddle__box">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect"> <img class="coddle__box__image" src="<%= image_path('isolayer1.jpg') %>" alt="Image" /></div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title"><a href="images/isolayer3.jpg" data-fancybox>THE DESIGN VALUE</a></h4>
-            <p class="coddle__box__description">DIGITAL CREATION UI-UX</p>
-          </figcaption>
-        </figure>
-      </div>
-      <!--end coddle__box -->
-    </li>
-    <li>
-      <div class="coddle__box">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect"><img class="coddle__box__image" src="<%= image_path('isolayer1.jpg') %>" alt="Image" /></div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title"><a href="images/isolayer4.jpg" data-fancybox>MISSING PUZZLE</a></h4>
-            <p class="coddle__box__description">DIGITAL CREATION UI-UX</p>
-          </figcaption>
-        </figure>
-      </div>
-      <!--end coddle__box -->
-    </li>
-    <li>
-      <div class="coddle__box">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect"><img class="coddle__box__image" src="<%= image_path('isolayer1.jpg') %>" alt="Image" /></div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title"><a href="images/isolayer5.jpg" data-fancybox>NEXT BEAT</a></h4>
-            <p class="coddle__box__description">DIGITAL CREATION UI-UX</p>
-          </figcaption>
-        </figure>
-      </div>
-      <!--end coddle__box -->
-    </li>
-    <li>
-      <div class="coddle__box">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect"><img class="coddle__box__image" src="<%= image_path('isolayer1.jpg') %>" alt="Image" /></div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title"><a href="images/isolayer6.jpg" data-fancybox>2 CARDS</a></h4>
-            <p class="coddle__box__description">DIGITAL CREATION UI-UX</p>
-          </figcaption>
-        </figure>
-      </div>
-      <!--end coddle__box -->
-    </li>
-    <li>
-      <div class="coddle__box">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect"> <img class="coddle__box__image" src="<%= image_path('isolayer1.jpg') %>" alt="Image" /></div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title"><a href="images/isolayer7.jpg" data-fancybox>REVIEW</a></h4>
-            <p class="coddle__box__description">DIGITAL CREATION UI-UX</p>
-          </figcaption>
-        </figure>
-      </div>
-      <!--end coddle__box -->
-    </li>
-    <li>
-      <div class="coddle__box">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect"> <img class="coddle__box__image" src="<%= image_path('isolayer1.jpg') %>" alt="Image" /></div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title"><a href="images/isolayer9.jpg" data-fancybox>HERDIUS</a></h4>
-            <p class="coddle__box__description">DIGITAL CREATION UI-UX</p>
-          </figcaption>
-        </figure>
-      </div>
-      <!--end coddle__box --></li>
+    <% end %>
   </ul>
 </section>
 <!-- end recent-works -->

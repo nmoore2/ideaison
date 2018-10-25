@@ -1,0 +1,20 @@
+.slick-arrow {
+  font-size: 95px;
+  color: #fff;
+  height: 100px;
+  z-index: 10;
+  position: absolute;
+  top: 30px;
+  font-size: 75px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  &.next {
+    right: 0;
+  }
+  &:hover {
+    .cls-3 {
+      fill: rgba(153,0,146, 0.95);
+    }
+  }
+}

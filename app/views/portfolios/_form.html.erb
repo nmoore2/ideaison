@@ -1,0 +1,92 @@
+<%= simple_form_for(@portfolio) do |f| %>
+<% if portfolio.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
+    <ul>
+    <% portfolio.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6 border-right">
+      <%= f.input :title, required: true %>
+      <%= f.input :category,  collection: [['Festivals and Events', 0], ['Social Content', 1], ['Experiential Marketing', 2], ['Other', 3]] %>
+      <%= f.input :description, as: :ckeditor %>
+
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <h5 class="card-header">Carousel
+        <%= link_to 'Add Image', new_image_path(portfolio_id: @portfolio.id, image_type: 'portfolio'), class: 'btn btn-sm btn-success float-right' %>
+        <%= link_to 'Add Video', portfolio_video_path(portfolio_id: @portfolio.id, image_type: 'portfolio'), class: 'btn btn-sm btn-success float-right', style: 'margin-right: 10px;' %>
+      </h5>
+      <div class="card-body">
+        <p class="card-text">
+          For best results, images for the carousel should be less than 4MB, and a minimum of 600px by 400px (w x h) at 72dpi.
+        </p>
+        <% if !@images.empty? %>
+        <table class="table table-condensed table-zebra">
+          <thead>
+            <tr>
+              <th class="col-sm-6"></th>
+              <th class="col-sm-3 col-sm-offset-1">Placement</th>
+              <th class="col-md-1"></th>
+              <th class="col-md-1"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @images.order(:placement).each do |image| %>
+              <tr>
+                <td>
+                  <% if image.video_url.present? %>
+                    <div class="iframe-wrapper">
+                      <%= image.video_url.html_safe %>
+                    </div>
+                  <% else %>
+                    <%= image_tag image.photo_url, style: 'max-height: 100px; max-width: 245px;' %></td>
+                <% end %>
+                <td><%= image.placement %></td>
+                <td><%= link_to 'Edit', edit_image_path(image, portfolio_id: portfolio.id, image_type: 'portfolio'), class: 'btn btn-sm btn-info' %></td>
+                <td><%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <% else %>
+        <strong>
+          No images added yet
+        </strong>
+        <% end %>
+        </div>
+      </div>
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <h5>Grid image</h5>
+
+        </div>
+        <div class="card-body">
+          <%= f.input :thumbnail, as: :file, label: false %>
+
+        <% unless portfolio.thumbnail.nil? %><%= image_tag portfolio.thumbnail.url, class: 'img-fluid' %>
+            <%# f.input :remove_thumbnail, as: :boolean, class: 'form-inline', label: 'remove grid image' %>
+        <% end %>
+      </div>
+
+      </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <%= f.button :submit, "Save",  class: 'btn btn-primary', style: "margin-bottom: 100px;" %>
+  </div>
+</div>
+
+
+<% end %>

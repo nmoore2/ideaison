@@ -1,7 +1,7 @@
 class VisitorsController < ApplicationController
 
   def index
-
+    @portfolios = Portfolio.all
   end
 
   def about
@@ -13,7 +13,7 @@ class VisitorsController < ApplicationController
   end
 
   def portfolio
-
+    @portfolios = Portfolio.all
   end
 
 end

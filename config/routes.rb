@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :images
+  resources :portfolios
+  get 'portfolio-video', to: 'images#video', as: "portfolio_video"
+
   devise_for :users
 
   get '/about', to: 'visitors#about'

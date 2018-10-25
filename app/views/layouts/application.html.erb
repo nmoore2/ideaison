@@ -45,29 +45,7 @@
      <%= yield %>
 
    <%= render 'shared/footer' %>
-   <div class="portfolio-item">
-     <div class="container">
-       <div class="row">
-         <div class="col-7">
-           <div class="portfolio-images">
-           <%= image_tag 'home/420-headliner.jpg' %>
-           <%= image_tag 'home/420-headliner.jpg' %>
-           <%= image_tag 'home/420-headliner.jpg' %>
-         </div>
-         </div>
-         <div class="col-5">
-           <div class="text-side">
-             <h1>Some text here</h1>
-             <p>
-               Some more text here
-             </p>
-           </div>
-
-         </div>
-       </div>
-     </div>
-     <span class="close-icon">X</span>
-   </div>
+   <%= render 'shared/portfolio_overlay' %>
 
     <%= javascript_include_tag 'application' %>
     <script>

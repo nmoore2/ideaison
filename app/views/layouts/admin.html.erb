@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <!-- CSS FILES -->
+  <%= stylesheet_link_tag 'admin', media: 'all' %>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <%= csrf_meta_tag %>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><%= image_tag 'logos/ideaison-logo-white.png', class: 'img-fluid', style: "max-height: 30px;" %></a>
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+      <div class="container-fluid">
+            <div class="row">
+              <%= render 'shared/admin_nav' %>
+
+              <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 main-content">
+
+                <%= yield %>
+
+              </main>
+            </div>
+          </div>
+    <%= javascript_include_tag 'admin' %>
+
+  </body>
+
+</html>
