@@ -1,7 +1,7 @@
 .index {
   .header {
-    background-color:rgba(153, 0, 146, 0.5);
-    // background-color:#000;
+    // background-color:rgba(153, 0, 146, 0.5);
+    background-color: transparent;
   }
 }
 .header {
@@ -36,17 +36,19 @@
     }
   }
   .custom-btn {
-    color: $pink;
+    color: #fff;
     letter-spacing: 0.5px;
     float: none;
     display: inline-block;
-    transition: background 0.2s ease-out;
+    transition: 0.2s ease-out;
+    background-color: transparent;
     border: 2px solid #fff;
     height: auto;
     line-height: 38px;
-    margin-right: 15px;
+    margin-left: 15px;
     &:hover {
-      background: $pink;
+      background: #fff;
+      color: $pink;
     }
   }
   &.stick-me {

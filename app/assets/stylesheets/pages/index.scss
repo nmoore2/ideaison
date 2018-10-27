@@ -1,6 +1,7 @@
 .inner {
-  background: asset-url('bg/splatterbackground.jpg') no-repeat center center;
-
+  background: asset-url('bg/landing-bg-3-rotate.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
 }
 .paint-canvas {
   // background: $pink;
@@ -16,6 +17,7 @@
   max-width: 600px;
   h2 {
     letter-spacing: 3px;
+    font-size: 45px;
   }
   h2, p {
     color: #fff;
