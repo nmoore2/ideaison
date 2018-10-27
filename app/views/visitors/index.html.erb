@@ -178,53 +178,8 @@
   <!-- end container -->
 </section>
 
-<section class="recent-works">
-  <div class="titles"> <span class="title-bg"></span>
-    <h3>RECENT WORK</h3>
-  </div>
-  <!-- end titles -->
-  <ul class="works-filter">
-    <li><a href="#" data-filter="*" class="current">ALL</a> </li>
-    <li><a href="#" data-filter=".webuiux">WEB UI-UX</a></li>
-    <li><a href="#" data-filter=".mobileapps">MOBILE APPS</a> </li>
-    <li><a href="#" data-filter=".development">DEVELOPMENT</a> </li>
-  </ul>
-  <ul class="works-grid">
-    <% @portfolios.each do |item| %>
-    <li class="webuiux">
-      <div class="coddle__box launch-lightbox">
-        <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect">
-            <%= image_tag item.thumbnail.url, class: 'img-fluid'  %>
-          </div>
-          <div class="coddle__box__deco coddle__box__deco--shine">
-            <div></div>
-          </div>
-          <figcaption class="coddle__box__caption">
-            <h4 class="coddle__box__title">
-              <%= item.title %>
-            </h4>
-            <p class="coddle__box__description">MUSIC FESTIVAL</p>
-          </figcaption>
-        </figure>
-        <div class="item-data" style="display: none;">
-          <div class="item-images">
-            <% item.images.each do |image| %>
-              <%= image_tag image.photo_url, class: 'img-fluid' %>
-            <% end %>
-          </div>
-          <div class="item-text"
-            data-title="<%= item.title %>"
-            data-description="<%= item.description %>">
-          </div>
-        </div>
-      </div>
-      <!--end coddle__box -->
-    </li>
-    <% end %>
-  </ul>
-</section>
-<!-- end recent-works -->
+<%= render 'shared/portfolio-grid' %>
+
 <section class="clients">
   <div class="container">
     <div class="row">
