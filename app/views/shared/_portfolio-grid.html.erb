@@ -30,9 +30,15 @@
         <div class="item-data" style="display: none;">
           <div class="item-images">
             <% item.images.each do |image| %>
-            <div class="img-wrap">
-              <%= image_tag image.photo_url, class: 'img-fluid' %>
-            </div>
+              <% if !image.video_url.blank? %>
+                <div class="iframe-wrapper">
+                  <%= image.video_url.html_safe %>
+                </div>
+              <% else %>
+              <div class="img-wrap">
+                <%= image_tag image.photo_url, class: 'img-fluid' %>
+              </div>
+              <% end %>
             <% end %>
           </div>
           <div class="item-text"

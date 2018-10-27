@@ -22,8 +22,21 @@
       margin: 0 auto;
       width: auto;
       position: absolute;
+      max-height: 100%;
       top: 50%;
-      transform: translateY(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .iframe-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      iframe {
+        // max-width: 975px;
+        // max-height: 550px;
+        width: 51vw;
+        height: 28vw;
+      }
     }
     h1, p {
       color: #fff;

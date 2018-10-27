@@ -1,0 +1,21 @@
+<h1>New Video for <%= @portfolio.title %>
+  <%# if params[:image_type] == 'private-events' %>
+    <%= link_to '<i class="fas fa-arrow-circle-left"></i> Back'.html_safe, :back, class: 'btn btn-info btn-sm float-right' %>
+  <%# else %>
+    <%# link_to '<i class="fas fa-arrow-circle-left"></i> Back'.html_safe, page_content_path(location: @location.id), class: 'btn btn-warning btn-sm pull-right' %>
+  <%# end %>
+</h1>
+<br />
+<div class="row">
+  <div class="col-sm-6">
+    <%= simple_form_for(@image) do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :placement, label: 'Placement', input_html: {style: "max-width: 75px;"} %>
+
+      <%= f.input :video_url, type: :string, html5: false, label: 'YouTube Embed Code (iframe)', placeholder: '<iframe></iframe>' %>
+      <%= f.input :portfolio_id, as: :hidden, :input_html => { value: params[:portfolio_id] } %>
+      <%= f.input :image_type, as: :hidden, :input_html => { value: params[:image_type]} %>
+        <%= f.button :submit, class: 'btn btn-primary', value: 'Create' %>
+    <% end %>
+  </div>
+</div>

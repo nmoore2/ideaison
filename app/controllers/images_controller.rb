@@ -22,12 +22,17 @@ class ImagesController < ApplicationController
   def edit
   end
 
+  def video
+    @image = Image.new
+    @portfolio = Portfolio.find(params[:portfolio_id])
+  end
+
   # POST /images
   # POST /images.json
   def create
     @image = Image.new(image_params)
     @portfolio = params[:image][:portfolio_id]
-    
+
     respond_to do |format|
       if @image.save
         format.html { redirect_to edit_portfolio_path(@portfolio), notice: 'Image was successfully created.' }
@@ -58,9 +63,11 @@ class ImagesController < ApplicationController
   # DELETE /images/1
   # DELETE /images/1.json
   def destroy
+    @portfolio = params[:id]
+
     @image.destroy
     respond_to do |format|
-      format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }
+      format.html { redirect_to edit_portfolio_path(@portfolio), notice: 'Image was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

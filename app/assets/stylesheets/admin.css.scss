@@ -30,6 +30,9 @@
 .navbar {
   background-color: $dark-pink;
 }
+.navbar-nav {
+  flex-direction: row;
+}
 
 input {
   @extend .form-control;
