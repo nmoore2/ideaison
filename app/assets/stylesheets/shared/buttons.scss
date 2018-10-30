@@ -10,10 +10,12 @@
   @include btn-transition;
   border: 2px solid #fff;
   letter-spacing: 0.5px;
-  margin-top: 30px;
   display: inline-block;
+  text-decoration: none;
   &:hover {
     text-decoration: none;
+    background-color: #fff;
+    color: $pink;
   }
   &.pink {
     border-color: $pink;

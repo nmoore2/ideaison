@@ -39,7 +39,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(#fff, $dark-pink);
+    background: radial-gradient(#fff, $lightest-pink, $dark-pink);
     // background-color: $dark-pink;
     z-index: 999999;
     img {
@@ -84,18 +84,23 @@ p {
 }
 
 .page-title {
-  background-color: $dark-pink;
+  // background-color: $dark-pink;
+  background: asset-url('bg/landing-bg-3-rotate.jpg') top center no-repeat;
+  background-size: cover;
   text-align:center;
   padding: 125px 0 50px;
-  h2, h6 {
+  h2, p {
     color: #fff;
+    max-width: 685px;
+    margin: 0 auto;
   }
   h2 {
     font-size: 42px;
     font-weight: bold;
   }
-  h6 {
-    font-size: 16px;
+  p {
+    font-size: 18px;
+    margin-top: 15px;
   }
 }
 

@@ -1,0 +1,27 @@
+.intro-coddle {
+  &.partners {
+  }
+  &.people {
+    padding-bottom: 0;
+  }
+}
+.about {
+  .clients {
+    margin-bottom: 50px
+  }
+}
+.person {
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+  h3 {
+    color: $pink;
+  }
+  h4 {
+    color: #696969;
+    font-size: 22px;
+  }
+  img {
+    box-shadow: 1px 3px 10px 1px rgba(0,0,0,0.5);
+  }
+}

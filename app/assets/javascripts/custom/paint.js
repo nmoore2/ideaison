@@ -1,5 +1,4 @@
 var $mouseMessage = $('#mouse-message');
-
 //detectmousedrag
 var isDragging = false;
 $('#canvas')
@@ -109,7 +108,8 @@ function OilPainting(){
 
 	var MouseDown = function(e) {
 		e.preventDefault();
-
+    // $('#canvas').css('cursor', 'url(<%= asset_url("icons/paintbrush-1.png") %>), auto;' );
+    console.log('why')
     if (counter >= pallete.length - 1) {
       counter = 0;
     } else {
