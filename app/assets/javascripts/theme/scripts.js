@@ -276,18 +276,18 @@
 
 		// PAGE TRANSITION
 		$('.transition').on('click', function(e) {
-		$('.transition-overlay').toggleClass("show-me");
+			$('#preloader').fadeIn();
 		});
 
 
-		// TRANSITION DELAY
-		$('.transition').on('click', function(e) {
-			e.preventDefault();
-			var goTo = this.getAttribute("href");
-			setTimeout(function(){
-			window.location = goTo;
-			},1000);
-			});
+		// // TRANSITION DELAY
+		// $('.transition').on('click', function(e) {
+		// 	e.preventDefault();
+		// 	var goTo = this.getAttribute("href");
+		// 	setTimeout(function(){
+		// 	window.location = goTo;
+		// 	},1000);
+		// 	});
 
 
 
@@ -340,23 +340,23 @@
 
 
 		// ODOMETER
-		$(window).scroll( function(e){
-		$('.odometer').each( function(i){
-
-				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-				var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-				/* If the object is completely visible in the window, fade it in */
-				if( bottom_of_window > bottom_of_object ){
-
-			  $('#1').html('11');
-				$('#2').html('870');
-				$('#3').html('252');
-				$('#4').html('99');
-
-			}
-		});
-		});
+		// $(window).scroll( function(e){
+		// $('.odometer').each( function(i){
+		//
+		// 		var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+		// 		var bottom_of_window = $(window).scrollTop() + $(window).height();
+		//
+		// 		/* If the object is completely visible in the window, fade it in */
+		// 		if( bottom_of_window > bottom_of_object ){
+		//
+		// 	  $('#1').html('11');
+		// 		$('#2').html('870');
+		// 		$('#3').html('252');
+		// 		$('#4').html('99');
+		//
+		// 	}
+		// });
+		// });
 
 
 
