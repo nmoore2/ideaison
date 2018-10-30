@@ -1,0 +1,26 @@
+.idea-btn {
+  padding: 15px 0px;
+  background-color: transparent;
+  border-radius: 100px;
+  min-width: 200px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+  @include btn-transition;
+  border: 2px solid #fff;
+  letter-spacing: 0.5px;
+  margin-top: 30px;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
+  &.pink {
+    border-color: $pink;
+    color: $pink;
+    &:hover {
+      background-color: $pink;
+      color: #fff;
+    }
+  }
+}

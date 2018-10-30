@@ -39,7 +39,8 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $dark-pink;
+    background: radial-gradient(#fff, $dark-pink);
+    // background-color: $dark-pink;
     z-index: 999999;
     img {
       height: 90px;
@@ -58,21 +59,21 @@ p {
 
 .cta-btn {
   padding: 15px 0px;
-  background-color: transparent;
-  border-radius: 22px;
+  background-color: #fff;
+  border-radius: 100px;
   min-width: 200px;
   text-align: center;
   font-size: 16px;
   line-height: 100%;
-  color: #fff;
   @include btn-transition;
+  color: $pink;
   border: 2px solid #fff;
   letter-spacing: 0.5px;
   margin-top: 30px;
   display: inline-block;
   &:hover {
-    color: $pink;
-    background: #fff;
+    color: #fff;
+    background: transparent;
     text-decoration: none;
   }
 }
