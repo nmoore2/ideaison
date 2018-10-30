@@ -49,8 +49,8 @@ function OilPainting(){
 	var MouseMove = function(e) {
 
   $('#mouse-message').css({
-    left:  e.pageX - 60,
-    top:   e.pageY - 30
+    left:  e.pageX + 150,
+    top:   e.pageY + 30
   });
 
 		var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
