@@ -7,17 +7,19 @@
   // background: $pink;
   background-size: cover;
   position: relative;
+  // cursor: asset-url('icons/paintbrush.svg') 32 32, auto;
+ cursor: asset-url('icons/paintbrush-1.png'), auto;
 }
 
 .text-overlay {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50px;
   transform: translateY(-50%);
   max-width: 600px;
   h2 {
     letter-spacing: 3px;
-    font-size: 45px;
+    font-size: 52px;
   }
   h2, p {
     color: #fff;
@@ -37,7 +39,9 @@
 }
 
 .main-features {
-  background: $pink;
+  background: asset-url('bg/services-bg-1.jpg') center center no-repeat;
+  background-size: cover;
+  // background: $pink;
   .title-bg {
     opacity: 0.5;
   }

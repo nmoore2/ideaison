@@ -24,7 +24,7 @@ function OilPainting(){
 	var dist = {x: 0, y: 0};
 	// var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
 	var colour = '#fff';
-  var pallete = ['F6DAF7', 'E77EE2', 'FFF'];
+  var pallete = ['690287', 'fff', 'aa008b'];
 
 
 	this.initialize = function(){
@@ -49,8 +49,8 @@ function OilPainting(){
 	var MouseMove = function(e) {
 
   $('#mouse-message').css({
-    left:  e.pageX + 60,
-    top:   e.pageY + 30
+    left:  e.pageX - 60,
+    top:   e.pageY - 30
   });
 
 		var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +

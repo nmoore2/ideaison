@@ -22,13 +22,34 @@ p {
   font-size: 16px;
 }
 
-.preloader {
-  background-color: $pink;
-  .spinner {
-    .path {
-      stroke: #fff;
+// .preloader {
+//   // background: asset-url('bg/preloader-bg.jpg') center center no-repeat;
+//   background-size: cover;
+//   background-color: $pink;
+//   .spinner {
+//     .path {
+//       stroke: #fff;
+//     }
+//   }
+// }
+
+#preloader, .transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $dark-pink;
+    z-index: 999999;
+    img {
+      height: 90px;
+      position: absolute;
+      -webkit-animation:spin 2s linear infinite;
+      -moz-animation:spin 2s linear infinite;
+      animation:spin 2s linear infinite;
+      left: 46%;
+      top: 44%;
     }
-  }
 }
 .transition-overlay {
   background: $pink;

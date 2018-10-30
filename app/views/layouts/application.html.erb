@@ -31,15 +31,9 @@
 
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <div class="preloader">
-      <svg class="spinner" viewBox="0 0 50 50">
-        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
-      </svg>
+    <div id="preloader">
+        <%= image_tag asset_url('logos/ideaison-a.png'), class: 'center' %>
     </div>
-    <!-- end preloader -->
-    <div class="transition-overlay"></div>
-    <!-- end transition-overlay -->
-
     <%= render 'layouts/navigation' %>
 
      <%= yield %>
@@ -53,8 +47,13 @@
     		(function($) {
     			$(window).on('load', function(){
     				$("body").addClass("page-loaded");
+
     			});
     		})(jQuery)
+        $('#preloader, .transition-overlay').delay(350).fadeOut('slow', function() {
+        });
+        // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow':'visible'});
     </script>
 
   </body>
