@@ -1,9 +1,21 @@
 .services {
   .service-box {
     // @include purple-gradient;
-    background-color: $pink;
+    background: asset-url('bg/services-bg-2.jpg') center center no-repeat;
+    background-size: cover;
+    // background-color: $pink;
+    // color: #000;
+    img {
+      // background-color: $pink;
+    }
+    .icon-check {
+
+    }
+
   }
 }
 .services-wrapper {
   padding: 50px 0;
+  // background: asset-url('bg/services-bg-1.jpg') center center no-repeat;
+  // background-size: cover;
 }

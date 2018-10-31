@@ -4,9 +4,12 @@ var isDragging = false;
 $('#canvas')
 .mousedown(function() {
   isDragging = true;
+  var imagePath = "url(<%= asset_path('icons/paintbrush-1.png') %>), auto";
+  $('#canvas').css('cursor', imagePath);
 })
 .mouseup(function() {
   isDragging = false;
+  $('#canvas').css('cursor', 'auto');
 });
 
 // oil painting
@@ -17,13 +20,12 @@ function OilPainting(){
 
 	var width;
 	var height;
-
 	var startPos = {x: window.innerWidth/2, y: window.innerHeight/2};
 	var prevPos = {x: window.innerWidth/2, y: 0};
 	var dist = {x: 0, y: 0};
 	// var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
 	var colour = '#fff';
-  var pallete = ['690287', 'fff', 'aa008b'];
+  var pallete = ['690287', 'fff', 'aa008b', 'f67ce1'];
 
 
 	this.initialize = function(){
@@ -108,8 +110,7 @@ function OilPainting(){
 
 	var MouseDown = function(e) {
 		e.preventDefault();
-    // $('#canvas').css('cursor', 'url(<%= asset_url("icons/paintbrush-1.png") %>), auto;' );
-    console.log('why')
+
     if (counter >= pallete.length - 1) {
       counter = 0;
     } else {

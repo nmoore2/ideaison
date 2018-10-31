@@ -175,10 +175,12 @@ button[type="submit"] { height: 52px; display: inline-block; border: none; backg
 
 /* NAVBAR */
 .navbar { width: 100%; float: left; display: block; padding: 15px 5%; padding-top: 20px; text-align: center; position: relative; z-index: 9; -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;
-  // background: url(../images/rainbow-bar.png) top repeat-x; 
+  // background: url(../images/rainbow-bar.png) top repeat-x;
   background-size: auto 5px; }
 .navbar:after { content: ""; width: 70%; height: 1px; background: #fff; opacity: 0.2; position: absolute; left: 15%; bottom: 0; }
-.navbar.stick-me { position: fixed; background: url(../images/rainbow-bar.png) top repeat-x #fff; background-size: auto 5px; z-index: 9; }
+.navbar.stick-me { position: fixed;
+  // background: url(../images/rainbow-bar.png) top repeat-x #fff; 
+  background-size: auto 5px; z-index: 9; }
 .navbar.stick-me .logo .logo-colored { display: block !important; }
 .navbar.stick-me .logo .logo-light { display: none; }
 .navbar.stick-me .navbar-nav .nav-item .nav-link { color: #99a4be; }

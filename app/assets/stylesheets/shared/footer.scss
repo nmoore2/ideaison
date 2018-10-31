@@ -1,0 +1,19 @@
+.footer {
+  background-color: rgb(96,96,96);
+  p {
+    font-size: 16px;
+  }
+  p, li a, small {
+    color: #e4e4e4;
+  }
+  small {
+    font-size: 13px;
+  }
+  .social-icons {
+    margin: 20px 0;
+    i {
+      color: #D3D3D3;
+      text-shadow: none;
+    }
+  }
+}
