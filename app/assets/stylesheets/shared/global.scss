@@ -89,10 +89,13 @@ p {
   background-size: cover;
   text-align:center;
   padding: 125px 0 50px;
-  h2, p {
+  h2, p, ul {
     color: #fff;
     max-width: 685px;
     margin: 0 auto;
+  }
+  ul {
+    text-align: left;
   }
   h2 {
     font-size: 42px;
