@@ -5,12 +5,12 @@ var isDragging = false;
 $('#canvas')
 .mousedown(function() {
   isDragging = true;
-  var imagePath = "url(<%= asset_path('icons/paintbrushes/1-02.svg') %>), auto";
-  // $('#canvas').css('cursor', imagePath);
+  var imagePath = "url(<%= asset_path('icons/paintbrushes/1-01.svg') %>), auto";
+  $('#canvas').css('cursor', imagePath);
 })
 .mouseup(function() {
   isDragging = false;
-  // $('#canvas').css('cursor', 'auto');
+  $('#canvas').css('cursor', 'auto');
 });
 
 // oil painting
