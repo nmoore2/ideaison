@@ -1,0 +1,38 @@
+<div class="contact-modal" style="display: none;">
+  <div class="form-wrapper">
+    <h1>Hit us up.</h1>
+    <br />
+    <%= simple_form_for @contact do |f| %>
+    <div class="row">
+      <div class="col-sm-6">
+        <%= f.input :first_name, required: true, label: false, placeholder: 'Name', :input_html => {class: 'form-control label_better'} %>
+      </div>
+      <div class="col-sm-6">
+        <%= f.input :email, required: true, label: false, placeholder: 'Email', :input_html => {class: 'form-control label_better'} %>
+      </div>
+      <div class="col-sm-12">
+        <%= f.input :message, label: false, placeholder: 'What can we do for you?', :input_html => {class: 'form-control label_better', rows: '5'} %>
+      </div>
+      <div class="col-sm-12">
+        <%= f.button :submit, "Send it." %>
+        </div>
+    </div>
+    <% end %>
+
+  </div>
+  <span class="close-icon">
+    <svg version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+    <g>
+      <g>
+
+          <rect x="-83.195" y="233.157" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 256.0027 618.0343)" width="678.39" height="45.681"/>
+      </g>
+      <g>
+
+          <rect x="233.157" y="-83.199" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 256.0016 618.0309)" width="45.681" height="678.391"/>
+      </g>
+    </g>
+    </svg>
+  </span>
+</div>

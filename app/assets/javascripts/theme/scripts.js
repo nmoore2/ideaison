@@ -224,7 +224,7 @@
 
 
 		// HAMBURGER MENU
-		$('.hamburger-menu, #launch-contact-modal').on('click', function(e) {
+		$('.hamburger-menu').on('click', function(e) {
 			$(this).toggleClass("open")
 			$(".hamburger-menu-box").toggleClass("show-me")
 			});

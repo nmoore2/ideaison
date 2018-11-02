@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :images
   resources :portfolios
   get 'portfolio-video', to: 'images#video', as: "portfolio_video"
+  resources :contacts
 
   devise_for :users
 
