@@ -1,9 +1,11 @@
 class ContactMailer < ApplicationMailer
   default from: 'info@ideaison.com'
 
-  def welcome_email
-    @user = params[:user]
-    @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+  # send a signup email to the user, pass in the user object that   contains the user's email address
+  def send_contact_email(contact)
+    @contact = contact
+    mail( :from => @contact.email, :to => 'n@nmoore.net',
+    :subject => 'New contact message from ideason.com' )
   end
+
 end

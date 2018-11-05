@@ -1,5 +1,4 @@
 class ContactsController < ApplicationController
-  before_action :set_property
   skip_before_action :verify_authenticity_token
 
   def new
@@ -7,19 +6,19 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contact])
-    @contact.request = request
-    if @contact.deliver
-      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
-      render :new
+    @contact = Contact.new(contact_params)
+    # @contact.request = request
+    if @contact.save
+      # Deliver the signup email
+      ContactMailer.send_contact_email(@contact).deliver_now
+      redirect_to('/', :notice => 'Thanks for your message, we will be in touch soon.')
     else
-      flash.now[:error] = 'Please correct form errors below.'
-      render :new
+      redirect_to('/', :notice => 'Sorry, we did not receive your inquiry, please try that again.')
     end
   end
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_property
-    @properties = Property.all
-  end
+  def contact_params
+     params.require(:contact).permit(:first_name, :last_name, :email, :message)
+   end
 end

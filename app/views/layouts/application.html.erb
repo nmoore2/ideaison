@@ -49,10 +49,11 @@
     				$("body").addClass("page-loaded");
 
     			});
+          $('.alert-success').delay(4000).fadeOut('slow');
     		})(jQuery)
-        $('#preloader, .transition-overlay').delay(350).fadeOut('slow', function() {
-        });
-        // will fade out the white DIV that covers the website.
+        $('#preloader, .transition-overlay').delay(350).fadeOut('slow')
+
+        // will fade out the DIV that covers the website.
         $('body').delay(350).css({'overflow':'visible'});
     </script>
 
