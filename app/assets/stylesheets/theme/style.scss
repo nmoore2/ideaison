@@ -179,7 +179,7 @@ button[type="submit"] { height: 52px; display: inline-block; border: none; backg
   background-size: auto 5px; }
 .navbar:after { content: ""; width: 70%; height: 1px; background: #fff; opacity: 0.2; position: absolute; left: 15%; bottom: 0; }
 .navbar.stick-me { position: fixed;
-  // background: url(../images/rainbow-bar.png) top repeat-x #fff; 
+  // background: url(../images/rainbow-bar.png) top repeat-x #fff;
   background-size: auto 5px; z-index: 9; }
 .navbar.stick-me .logo .logo-colored { display: block !important; }
 .navbar.stick-me .logo .logo-light { display: none; }
@@ -255,7 +255,7 @@ button[type="submit"] { height: 52px; display: inline-block; border: none; backg
 .main-features .feature-box .more-link { width: 37px; height: 37px; text-align: right; font-size: 17px; color: #fff; position: absolute; right: -4px; bottom: -4px; z-index: 2; line-height: 50px; padding-right: 5px; }
 .main-features .feature-box .more-link:hover { text-decoration: none; }
 .main-features .feature-box .more-link:after { content: ""; width: 0; height: 0; border-style: solid; border-width: 0 0 37px 37px; border-color: transparent transparent #fed20f transparent; position: absolute; right: 0; bottom: 0; z-index: -1; }
-.main-features .feature-box ul { width: 100%; margin-top: 20px; margin-bottom: 0; padding: 0; display: none; }
+.main-features .feature-box ul { width: 100%; margin-top: 20px; margin-bottom: 0; padding: 0;}
 .main-features .feature-box ul li { width: 100%; margin-bottom: 4px; padding: 0; list-style: none; font-weight: 600; font-size: 12px; }
 .main-features .feature-box ul li a { color: #fff; }
 .main-features .feature-box ul li a img { width: 12px; margin-right: 4px; }
@@ -271,7 +271,7 @@ button[type="submit"] { height: 52px; display: inline-block; border: none; backg
 .services-wrapper .service-box .more-link { width: 37px; height: 37px; text-align: right; font-size: 17px; color: #fff; position: absolute; right: -4px; bottom: -4px; z-index: 2; line-height: 50px; padding-right: 5px; }
 .services-wrapper .service-box .more-link:hover { text-decoration: none; }
 .services-wrapper .service-box .more-link:after { content: ""; width: 0; height: 0; border-style: solid; border-width: 0 0 37px 37px; border-color: transparent transparent #57c199 transparent; position: absolute; right: 0; bottom: 0; z-index: -1; }
-.services-wrapper .service-box ul { width: 100%; margin-top: 20px; margin-bottom: 0; padding: 0; padding-left: 100px; display: none; }
+.services-wrapper .service-box ul { width: 100%; margin-top: 20px; margin-bottom: 0; padding: 0; padding-left: 100px; }
 .services-wrapper .service-box ul li { width: 100%; margin-bottom: 4px; padding: 0; list-style: none; font-weight: 600; font-size: 12px; }
 .services-wrapper .service-box ul li a { color: #fff; }
 .services-wrapper .service-box ul li a img { width: 12px; margin-right: 4px; }
