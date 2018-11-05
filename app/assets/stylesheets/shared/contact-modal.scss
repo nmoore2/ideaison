@@ -18,35 +18,46 @@
       }
       label {
         color: #fff;
-        font-size: 20px;
+        font-size: 22px;
         opacity: 0;
       }
       input, textarea {
         background: transparent;;
         color: #fff;
         border-width: 2px;
-        font-size: 20px;
+        font-size: 22px;
         &:focus {
           border-color: $lightest-pink;
-          box-shadow: 0 0 0 0.2rem rgba(231,126,226, 0.25)
+          box-shadow: 0 0 0 0.2rem rgba(255,255,255, 0.5)
         }
       }
-      .form-control, .btn {
+      .form-control, button {
         height: 60px;
+        font-family: 'Open Sans', sans-serif;
       }
       textarea.form-control {
         height: auto;
       }
-      input[type="submit"] {
+      button {
         background: #fff;
         color: $dark-pink;
         width: 100%;
         margin-top: 20px;
         @include btn-transition;
+        font-size: 22px;
+        svg {
+          height: 20px;
+          fill: $dark-pink;
+          margin-left: 10px;
+          @include btn-transition;
+        }
         &:hover {
           color: #fff;
           background: $dark-pink;
           border: 2px solid #fff;
+          svg {
+            fill: #fff;
+          }
         }
       }
       ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
