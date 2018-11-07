@@ -45,6 +45,7 @@
         margin-top: 20px;
         @include btn-transition;
         font-size: 22px;
+        cursor: pointer;
         svg {
           height: 20px;
           fill: $dark-pink;

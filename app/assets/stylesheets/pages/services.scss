@@ -1,7 +1,14 @@
+.page-summary {
+  max-width: 750px;
+  padding: 50px 20px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+}
 .services {
   .service-box {
-    // @include purple-gradient;
-    background: asset-url('bg/services-bg-2.jpg') center center no-repeat;
+    @include purple-gradient;
+    // background: asset-url('bg/services-bg-2.jpg') center center no-repeat;
     background-size: cover;
     // background-color: $pink;
     // color: #000;
@@ -11,20 +18,29 @@
       figure {
         display: inline-block;
       }
-    p {
-      display: inline-block;
-      max-width: 390px;
+    p, li, ol {
+      font-size: 16px;
+      color: black;
     }
     .expand-text {
-      padding-left: 100px;
+      width: 100%;
+      margin-top: 70px;
       ul {
         padding-left: 20px;
       }
     }
+    h5 {
+        font-size: 20px;
+        color: $pink;
+        margin-top: 17px;
+    }
   }
   .page-title {
+    h2 {
+      margin-bottom: 20px;
+    }
     p {
-      max-width: 590px;
+      max-width: 763px;
     }
   }
 }

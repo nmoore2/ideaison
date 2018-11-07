@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   resources :images
   resources :portfolios
   get 'portfolio-video', to: 'images#video', as: "portfolio_video"
@@ -7,8 +8,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   get '/about', to: 'visitors#about'
-  get '/services', to: 'visitors#services'
-  get '/portfolio', to: 'visitors#portfolio'
+  get '/what-we-do', to: 'visitors#services'
+  get '/our-work', to: 'visitors#portfolio'
 
   root to: 'visitors#index'
 end

@@ -41,10 +41,15 @@
 .side-content {
 
 }
+.index {
+  .main-features {
+    background: asset-url('bg/services-bg-1.jpg') center center no-repeat;
+    background-size: cover;
+  }
+}
 .main-features {
-  background: asset-url('bg/services-bg-1.jpg') center center no-repeat;
-  background-size: cover;
-  // background: $pink;
+
+  background: #fff;
   padding-top: 50px;
   .titles {
     margin-bottom: 20px;
