@@ -11,7 +11,7 @@ CKEDITOR.editorConfig = function (config) {
     ["Bold",  "Italic",  "Underline",  "Strike",  "-",  "Subscript",  "Superscript"],
   ];
   config.toolbar = "Full";
-  config.height = 400; 
+  config.height = 400;
 
 
   // ... rest of the original config.js  ...

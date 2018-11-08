@@ -13,8 +13,6 @@
 
   <div class="row">
     <div class="col-sm-8">
-
-
       <% if @image.video_url.blank? %>
         <%= f.input :caption, as: :text, input_html: {rows: 2}, maxlength: 150, label: 'Caption (also serves as Alt text, max 150 characters)' %>
         <%= f.input :photo %>
@@ -23,8 +21,9 @@
         <%= f.input :video_url, type: :string, html5: false, label: 'YouTube embed code (iframe)', placeholder: 'Ex: <iframe></iframe>' %>
       <% end %>
       <div class="row">
-        <div class="col-sm-2">
-          <%= f.input :placement, label: "Placement" %>
+        <div class="col-sm-12">
+          <br />
+          <%= f.input :placement, label: "Placement (sets order in carousel)", input_html: {style: 'width: 75px;'} %>
         </div>
       </div>
         <%= f.input :portfolio_id, as: :hidden, :input_html => { value: params[:portfolio_id] } %>

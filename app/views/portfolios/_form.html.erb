@@ -12,9 +12,16 @@
 
 <div class="row">
   <div class="col-md-6 border-right">
-      <%= f.input :title, required: true %>
-      <%= f.input :category,  collection: [['Festivals and Events', 0], ['Social Content', 1], ['Experiential Marketing', 2], ['Other', 3]] %>
-      <%= f.input :description, as: :ckeditor %>
+    <div class="row">
+      <div class="col-sm-9">
+        <%= f.input :title, required: true %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.input :placement, input_html: {style: 'max-width: 70px;'} %>
+      </div>
+    </div>
+      <%= f.input :service_id, as: :select,  required: true, collection: Service.order(:title).all.collect {|c| [ c.title.to_s, c.id ] }, include_blank: true, label: 'Category', input_html: { class: 'form-control' } %>
+      <%= f.input :description, as: :ckeditor, input_html: { ckeditor: { height: 400 } } %>
 
   </div>
   <div class="col-md-6">
@@ -70,6 +77,9 @@
 
         </div>
         <div class="card-body">
+          <p>
+            Thumbnail images should be at least 600px wide and maintain a 3:2 aspect ratio (W x H)
+            </p>
           <%= f.input :thumbnail, as: :file, label: false %>
 
         <% unless portfolio.thumbnail.nil? %><%= image_tag portfolio.thumbnail.url, class: 'img-fluid' %>

@@ -9,14 +9,20 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>
+        Placement
+        </th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @portfolios.each do |portfolio| %>
+    <% @portfolios.order(:placement).each do |portfolio| %>
       <tr>
         <td><%= link_to portfolio.title, edit_portfolio_path(portfolio) %></td>
+        <td>
+          <%= portfolio.placement %>
+          </td>
         <td><%= link_to 'Edit', edit_portfolio_path(portfolio), class: 'btn btn-sm btn-info' %></td>
         <td><%= link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
       </tr>

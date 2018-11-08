@@ -203,24 +203,8 @@
 				  jQuery(this).text('-');
 			}
 			$(this).siblings(".feature-box .expand-text").slideToggle();
-			 $(this).parent(".main-features").siblings(".feature-box").children("ul").next().slideUp();
 			return false;
 		});
-
-
-		// SERVICES
-		$('.services .more-link').on('click', function(e) {
-			jQuery(this).text('+');
-			if($('.expand-text').is(':visible')){
-				  jQuery(this).text('+');
-			}else{
-				  jQuery(this).text('-');
-			}
-			$(this).siblings(".expand-text").slideToggle();
-			 $(this).parent(".services").siblings(".service-box").children("expand-text").next().slideUp();
-			return false;
-		});
-
 
 
 		// HAMBURGER MENU
@@ -295,7 +279,11 @@
 		$(window).on('load',function(e){
 			$('.works-grid').isotope({
 			  itemSelector: '.works-grid li',
-			  percentPosition: true
+			  percentPosition: true,
+				// layout mode options
+				// masonry: {
+				// 	gutter: 20
+				// }
 			});
 		});
 

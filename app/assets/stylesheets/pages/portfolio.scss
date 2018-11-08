@@ -1,7 +1,32 @@
 .portfolio {
   .page-title {
     p {
-      max-width: 765px;
+      // max-width: 765px;
     }
   }
+}
+
+.recent-works {
+  .works-grid {
+    li {
+     width: calc(33.33%);
+    }
+    &.spaced {
+      li {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+.coddle__box__title {
+  font-size: 32px;
+  padding: 0 50px;
+  font-family: 'Oswald', sans-serif;
+
+}
+.coddle__box__description {
+  color: $lightest-pink;
+  text-transform: uppercase;
+  font-size: 18px;
 }

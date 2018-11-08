@@ -9,14 +9,18 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>
+        Placement
+      </th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @services.each do |service| %>
+    <% @services.order(:placement).each do |service| %>
       <tr>
         <td><%= link_to service.title, edit_service_path(service) %></td>
+        <td><%= service.placement %></td>
         <td><%= link_to 'Edit', edit_service_path(service), class: 'btn btn-sm btn-info' %></td>
         <td><%= link_to 'Delete', service, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
       </tr>

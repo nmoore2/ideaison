@@ -5,13 +5,13 @@
   <!-- end titles -->
   <ul class="works-filter">
     <li><a href="#" data-filter="*" class="current">ALL</a> </li>
-    <li><a href="#" data-filter=".webuiux">WEB UI-UX</a></li>
-    <li><a href="#" data-filter=".mobileapps">MOBILE APPS</a> </li>
-    <li><a href="#" data-filter=".development">DEVELOPMENT</a> </li>
+    <% @services.order(:placement).each do |service| %>
+      <li><a href="#" data-filter=".<%= service.title.parameterize %>"><%= service.title.upcase %></a> </li>
+    <% end %>
   </ul>
-  <ul class="works-grid">
-    <% @portfolios.each do |item| %>
-    <li class="webuiux">
+  <ul class="works-grid spaced">
+    <% @portfolios.order(:placement).each do |item| %>
+    <li class="<%= Service.find(item.service_id).title.parameterize rescue '' %>">
       <div class="coddle__box launch-lightbox">
         <figure class="coddle__box__figure">
           <div class="reveal-effect se2-white wow" data-aos="slide-effect">
@@ -24,7 +24,7 @@
             <h4 class="coddle__box__title">
               <%= item.title %>
             </h4>
-            <p class="coddle__box__description">MUSIC FESTIVAL</p>
+            <p class="coddle__box__description"><%= Service.find(item.service_id).title rescue ''  %></p>
           </figcaption>
         </figure>
         <div class="item-data" style="display: none;">
