@@ -40,7 +40,7 @@ $('.close-icon').click(function() {
 $('.close-icon').click(function() {
   $('.portfolio-item').fadeOut('fast');
 })
-// 
+//
 // $(".text-side").mCustomScrollbar({
 //   // advanced:{ updateOnContentResize: true },
 //   theme: 'dark'

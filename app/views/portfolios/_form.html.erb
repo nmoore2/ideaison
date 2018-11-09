@@ -21,7 +21,7 @@
       </div>
     </div>
       <%= f.input :service_id, as: :select,  required: true, collection: Service.order(:title).all.collect {|c| [ c.title.to_s, c.id ] }, include_blank: true, label: 'Category', input_html: { class: 'form-control' } %>
-      <%= f.input :description, as: :ckeditor, input_html: { ckeditor: { height: 400 } } %>
+      <%= f.input :description, as: :ckeditor %>
 
   </div>
   <div class="col-md-6">

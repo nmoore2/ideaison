@@ -36,7 +36,12 @@
       }
     }
   }
+  a:not([href]):not([tabindex]) {
+  color: #fff;
+  text-decoration: none;
+}
   .custom-btn {
+    cursor: pointer;
     color: #fff;
     letter-spacing: 0.5px;
     float: none;
@@ -49,7 +54,7 @@
     margin-left: 15px;
     &:hover {
       background: #fff;
-      color: $pink;
+      color: $pink !important;
     }
   }
   &.stick-me {
