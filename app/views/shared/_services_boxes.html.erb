@@ -1,8 +1,14 @@
-<% @services.order(:placement).each do |service| %>
+<% @services.order(:placement).each_with_index do |service, i| %>
 <div class="col-lg-4 col-sm-12">
   <div class="feature-box">
     <figure>
-      <%= image_tag ('icons/imac.png') %>
+      <% if i == 0 %>
+        <%= image_tag ('icons/influencer.png'), class: 'influencer' %>
+      <% elsif i == 1 %>
+        <%= image_tag ('icons/experiential.png') %>
+      <% else %>
+        <%= image_tag ('icons/content.png') %>
+      <% end %>
     </figure>
     <span></span>
     <h5><%= service.title %></h5>

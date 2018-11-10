@@ -14,6 +14,12 @@
         color: $pink;
         margin-top: 17px;
     }
+    img {
+      width: 100px;
+      &.influencer {
+        // width: 90px;
+      }
+    }
   }
   .page-title {
     h2 {

@@ -44,6 +44,7 @@
       text-shadow: 0px -3px 15px $lightest-pink;
     }
     .text-box {
+      min-height: 475px;
       // -webkit-box-shadow: 3px 3px 202px 38px rgba(0,0,0,1);
       // -moz-box-shadow: 3px 3px 202px 38px rgba(0,0,0,1);
       // box-shadow: 3px 3px 202px 38px rgba(0,0,0,1);
@@ -74,29 +75,29 @@
       height: 100px;
     }
     .portfolio-images {
-      height: 550px;
+      margin-top: 40px;
+      height: 500px;
       // border: 1px solid $lightest-pink;
       // margin-top: 30px;
-
-
       img {
-        margin: 0 auto;
-        max-width: 85%;
-        max-height: 90%;
+        // margin: 0 auto;
+        width: auto;
+        height: 100%;
+        max-height: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        box-shadow: 0 0px 25px 0px #cccccc96;
+        // box-shadow: 0 0px 25px 0px #cccccc96;
 
       }
       .slick-arrow {
 
         &.prev {
-          left: -6%;
+          // left: -6%;
         }
         &.next {
-          right: -34px;
+          // right: -34px;
         }
       }
 

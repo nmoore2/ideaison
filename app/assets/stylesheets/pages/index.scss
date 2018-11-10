@@ -59,7 +59,7 @@
   }
   .feature-box {
     @include purple-gradient;
-    min-height: 430px;
+    min-height: 450px;
     padding: 50px 38px 40px;
     h5 {
       color: $pink;
@@ -74,9 +74,6 @@
     }
     figure {
       height: auto;
-      img {
-        width: 80px;
-      }
     }
   }
 }

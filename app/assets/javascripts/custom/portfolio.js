@@ -18,9 +18,17 @@ $('.launch-lightbox').on('click', function() {
   var newImages = $(this).find('.item-images').children();
   var itemText = $(this).find('.item-text');
   var title = itemText.data('title');
+  var people = itemText.data('people');
+  var ideas = itemText.data('ideas');
+  var threeThings = itemText.data('three-things');
+  var cherry = itemText.data('cherry');
   var description = itemText.data('description');
 
   $('#project-title').html(title);
+  $('#people').html(people);
+  $('#ideas').html(ideas);
+  $('#three-things').html(threeThings);
+  $('#cherry').html(cherry);
   $('#project-description').html(description);
 
   $portfolioImages.empty();

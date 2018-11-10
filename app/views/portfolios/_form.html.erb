@@ -21,7 +21,11 @@
       </div>
     </div>
       <%= f.input :service_id, as: :select,  required: true, collection: Service.order(:title).all.collect {|c| [ c.title.to_s, c.id ] }, include_blank: true, label: 'Category', input_html: { class: 'form-control' } %>
-      <%= f.input :description, as: :ckeditor %>
+      <%= f.input :description, as: :ckeditor, label: 'Summary' %>
+      <%= f.input :people, as: :ckeditor %>
+      <%= f.input :ideas, as: :ckeditor %>
+      <%= f.input :proud_of, as: :ckeditor, label: "3 things we're proud of" %>
+      <%= f.input :cherry_on_top, as: :ckeditor %>
 
   </div>
   <div class="col-md-6">
