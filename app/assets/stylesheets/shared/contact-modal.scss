@@ -23,10 +23,15 @@
         font-size: 45px;
         text-align: center;
       }
-      label {
+      label:not(.error) {
         color: #fff;
         font-size: 22px;
         opacity: 0;
+      }
+      label.error {
+        color: red;
+        font-size: 16px;
+        display:block;
       }
       input, textarea {
         background: transparent;;
@@ -34,8 +39,8 @@
         border-width: 2px;
         font-size: 22px;
         &:focus {
-          border-color: $lightest-pink;
-          box-shadow: 0 0 0 0.2rem rgba(255,255,255, 0.5)
+          border: $pink;
+          box-shadow: 0 0 0 0.2rem rgba(231,126,226, 1)
         }
       }
       .form-control, button {
@@ -62,13 +67,14 @@
           margin-left: 10px;
           @include btn-transition;
         }
-        &:hover {
+        &:hover, &:focus {
           color: #fff;
           background: transparent;
           svg {
             fill: #fff;
           }
         }
+
       }
       ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         color: #fff;

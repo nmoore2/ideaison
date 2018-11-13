@@ -3,12 +3,12 @@
     <h3>RECENT WORK</h3>
   </div>
   <!-- end titles -->
-  <ul class="works-filter">
+  <!-- <ul class="works-filter">
     <li><a href="#" data-filter="*" class="current">ALL</a> </li>
     <% @services.order(:placement).each do |service| %>
       <li><a href="#" data-filter=".<%= service.title.parameterize %>"><%= service.title.upcase %></a> </li>
     <% end %>
-  </ul>
+  </ul> -->
   <ul class="works-grid spaced">
     <% @portfolios.order(:placement).each do |item| %>
     <li class="<%= Service.find(item.service_id).title.parameterize rescue '' %>">

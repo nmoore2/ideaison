@@ -16,12 +16,11 @@ p, a, li {
   color: $pink;
   -webkit-text-fill-color: initial;
 }
-.alert {
-  &.alert-success {
-    background-color: $lightest-pink;
+.alert.alert-success, #notice  {
+    background-color: rgba(255,255,255, 0.8);
     border: none;
     text-align: center;
-    color: #fff;
+    color: $dark-pink;
     top: 83px;
     line-height: 100%;
     padding: 20px 0;
@@ -30,7 +29,6 @@ p, a, li {
     width: 100%;
     font-size: 18px;
     margin-bottom: 0;
-  }
 }
 // .preloader {
 //   // background: asset-url('bg/preloader-bg.jpg') center center no-repeat;

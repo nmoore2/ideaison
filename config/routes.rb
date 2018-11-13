@@ -7,9 +7,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  # Public pages
   get '/about', to: 'visitors#about'
   get '/what-we-do', to: 'visitors#services'
   get '/our-work', to: 'visitors#portfolio'
+  get '/blog', to: 'visitors#blog'
 
   root to: 'visitors#index'
 end

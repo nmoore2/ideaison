@@ -59,7 +59,7 @@
   }
   .feature-box {
     @include purple-gradient;
-    min-height: 450px;
+    min-height: 350px;
     padding: 50px 38px 40px;
     h5 {
       color: $pink;
@@ -96,6 +96,7 @@
 }
 
 .clients {
+  padding-bottom: 75px;
   ul {
     display: flex;
     flex-wrap: wrap;

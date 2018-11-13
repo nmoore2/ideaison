@@ -4,9 +4,10 @@ class ContactMailer < ApplicationMailer
   # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_contact_email(contact)
     @contact = contact
-    @to = Rails.env.development? ? 'n@nmoore.net' : 'nate@nmoore.net'
-    mail( :from => @contact.email, :to => 'n@nmoore.net',
-    :subject => 'New contact message from ideason.com' )
+    @to = Rails.env.development? ? ["n@nmoore.net"] : ["lauren@ideaison.com", "naomi@ideaison.com"]
+    mail( :from => @contact.email, :to => @to,
+    :subject => 'New contact message from ideason.com',
+    :bcc => 'nate@nmoore.net')
   end
 
 end

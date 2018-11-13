@@ -15,7 +15,7 @@ gem 'carrierwave'
 gem "mini_magick"
 gem 'cloudinary'
 gem 'file_validators'
-
+gem 'httparty'
 
 
 group :development, :test do

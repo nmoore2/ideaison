@@ -12,6 +12,7 @@
   letter-spacing: 0.5px;
   display: inline-block;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     text-decoration: none;
     background-color: #fff;
@@ -25,4 +26,9 @@
       color: #fff;
     }
   }
+}
+
+//overrides
+a:not([href]):not([tabindex]) {
+  color: #fff;
 }
