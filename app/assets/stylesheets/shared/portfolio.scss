@@ -45,11 +45,11 @@
     }
     .text-box {
       min-height: 475px;
-      // -webkit-box-shadow: 3px 3px 202px 38px rgba(0,0,0,1);
-      // -moz-box-shadow: 3px 3px 202px 38px rgba(0,0,0,1);
-      // box-shadow: 3px 3px 202px 38px rgba(0,0,0,1);
-      // box-shadow: inset 0 0px 5px 1px #E77EE2;
-      // border: 1px solid $lightest-pink;
+      img {
+        margin: 10px auto 0 auto;
+        display: block;
+        max-width: 75px;
+      }
     }
     h1, h3 {
       text-shadow: 0px 0px 8px $dark-pink;
@@ -59,8 +59,8 @@
       color: #fff;
       text-transform: uppercase;
       font-size: 32px;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin-bottom: 25px;
+      margin-top: 15px;
     }
     .far, .fas, .icon {
       text-shadow: 0px -2px 5px $lightest-pink;
