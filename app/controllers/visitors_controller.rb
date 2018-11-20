@@ -14,7 +14,7 @@ class VisitorsController < ApplicationController
   end
 
   def about
-
+    @team = Team.all
   end
 
   def blog

@@ -361,3 +361,13 @@
 
 
 })(jQuery);
+
+$('.read-more').click(function() {
+	var expandText = $(this).parent('div').siblings('.expand-text').slideToggle();
+	$(this).toggleClass('visible')
+	if ($(this).hasClass('visible')) {
+		$(this).html('Less <i class="fas fa-caret-up">');
+	} else {
+		$(this).html('More <i class="fas fa-caret-down">');
+	}
+})

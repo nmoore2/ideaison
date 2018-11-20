@@ -5,8 +5,9 @@
 </div>
 <section class="intro-coddle people">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-10">
+		<div class="row">
+
+			<div class="col-md-6">
 				<div class="titles"> <span class="title-bg"></span>
           <h3>ABOUT... THE PEOPLE</h3>
         </div>
@@ -18,57 +19,51 @@
         </p>
     <!-- end article -->
 			</div>
-			<!-- end col-10 -->
+      <div class="col-md-6 team-photo">
+        <%= image_tag 'about/ideaison-team.jpg' %>
+      </div>
 		</div>
     <br />
     <br />
 		<!-- end row -->
 	<!-- end container -->
+  <% @team.order(:placement).each do |person| %>
   <div class="row person">
     <div class="col-sm-3">
-      <%= image_tag 'about/lauren.jpg', class: 'img-fluid' %>
+      <%= image_tag person.photo_url, class: 'img-fluid' %>
     </div>
     <div class="col-sm-9">
-      <h3>Lauren Kashuk</h3>
-      <h4>Founder, Creative Director</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <h3><%= person.name.html_safe %></h3>
+      <!-- <h4>Founder, Creative Director</h4> -->
+      <p><strong>What do you do for Ideaison?</strong></p>
+        <%= person.what_you_do.html_safe %>
         <br />
+        <p><strong>What musical artist deserves way more hype?</strong></p>
+        <%= person.what_musical_artist.html_safe %>
         <br />
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
+        <p><strong>Tell us about the best concert/show you've ever seen.</strong></p>
+         <%= person.best_concert.html_safe %>
+      <a class="read-more">More <i class="fas fa-caret-down"></i></a>
+      <br />
+    </div>
+      <div class="col-sm-12 expand-text">
+        <p><strong>Coolest experience you've had or been a part of?</strong></p>
+         <%= person.coolest_experience.html_safe %>
+         <br />
+         <p><strong>Favorite way to consume cannabis?</strong></p>
+        <%= person.consume_cannabis.html_safe %>
+         <br />
+         <p><strong>If you were a member of a band, which instrument would you play and why?</strong></p>
+         <%= person.which_instrument.html_safe %>
+         <br />
+         <p><strong>Go to beauty product, item of clothing, and shoe.</strong></p>
+         <%= person.beauty_product.html_safe %>
+         <br />
+         <p><strong>Most unique place you've traveled?</strong></p>
+         <%= person.unique_place.html_safe %>
     </div>
   </div>
-  <div class="row person">
-    <div class="col-sm-3">
-      <%= image_tag 'about/naomi.jpg', class: 'img-fluid' %>
-    </div>
-    <div class="col-sm-9">
-      <h3>Naomi Gaeng</h3>
-      <h4>Project Manager</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        <br />
-        <br />
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-    </div>
-  </div>
-  <div class="row person">
-    <div class="col-sm-3">
-      <%= image_tag 'about/person-placeholder.png', class: 'img-fluid' %>
-    </div>
-    <div class="col-sm-9">
-      <h3>Person Person</h3>
-      <h4>Title</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        <br />
-        <br />
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-    </div>
-  </div>
+  <% end %>
 </div>
 
 </section>

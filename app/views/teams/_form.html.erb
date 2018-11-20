@@ -1,0 +1,49 @@
+<%= simple_form_for(@team) do |f| %>
+<% if team.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+    <ul>
+    <% team.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-sm-9">
+        <%= f.input :name, required: true %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.input :placement, input_html: {style: 'width: 50px;'} %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <%= f.input :photo, as: :file %>
+    <% unless team.photo_url.nil? %>
+      <%= image_tag team.photo_url %>
+    <% end %>
+  </div>
+</div>
+<%= f.input :what_you_do, as: :ckeditor, required: true, label: 'What you do for ideaison' %>
+<%= f.input :what_musical_artist, as: :ckeditor, label: 'What musical artist deserves way more hype?' %>
+<%= f.input :best_concert, as: :ckeditor, label: "
+Tell us about the best concert/show you've ever seen. What made it amazing?" %>
+<%= f.input :coolest_experience, as: :ckeditor, label: "
+Coolest experience you've had or been a part of (think branded or a music festival, immersive theater, etc). Tell us about what made it so memorable. " %>
+<%= f.input :consume_cannabis, as: :ckeditor, label: 'Favorite way to consume cannabis:' %>
+<%= f.input :which_instrument, as: :ckeditor, label: 'If you were a member of a band, which instrument would you play and why?' %>
+<%= f.input :beauty_product, as: :ckeditor, label: 'Go to beauty product, item of clothing, and shoe:' %>
+<%= f.input :unique_place, as: :ckeditor, label: "Most unique place you've traveled:" %>
+
+<div class="row">
+  <div class="col-sm-6">
+    <%= f.button :submit, "Save",  class: 'btn btn-primary', style: "margin-bottom: 100px;" %>
+  </div>
+</div>
+
+
+<% end %>

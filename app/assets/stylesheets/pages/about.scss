@@ -4,6 +4,13 @@
   &.people {
     padding-bottom: 0;
   }
+  .team-photo {
+    img {
+      border-radius: 100px;
+      margin: 60px auto 0 auto;
+      max-width: 540px;
+    }
+  }
 }
 .about {
   .clients {
@@ -12,7 +19,7 @@
 }
 .person {
   text-align: left;
-  max-width: 1100px;
+  // max-width: 1200px;
   margin: 0 auto;
   padding: 50px 0;
   &:not(:last-of-type) {
@@ -20,6 +27,8 @@
   }
   h3 {
     color: $pink;
+    margin-bottom: 10px;
+    line-height: 100%;
   }
   h4 {
     color: #696969;
@@ -28,4 +37,17 @@
   img {
     box-shadow: 1px 3px 10px 1px rgba(0,0,0,0.5);
   }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+a.read-more {
+  color: $pink !important;
+  display: block;
+  cursor: pointer;
+}
+
+.expand-text {
+  display: none;
 }
