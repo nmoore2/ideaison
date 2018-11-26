@@ -1,5 +1,6 @@
 .intro-coddle {
   &.partners {
+    padding-top: 0;
   }
   &.people {
     padding-bottom: 0;
@@ -15,6 +16,9 @@
 .about {
   .clients {
     margin-bottom: 50px
+  }
+  .page-title {
+    background: asset-url('bg/desk.jpg') center center no-repeat;
   }
 }
 .person {
