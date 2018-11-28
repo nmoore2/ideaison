@@ -3,32 +3,12 @@
     <h3>TESTIMONIALS</h3>
   </div>
   <div class="testimonials-carousel">
-    <% 4.times do %>
+    <% @testimonials.order(:placement).each do |testimonial| %>
       <div class="item">
         <div class="quote">
-          <p>
-            Ideaison gave me the opportunity to experience an outside of the box approach to my brand. I discovered, through them, culture, experiences, music, and incredible people that all connected to my motivations and inspired me to think bigger and bolder. The incredible team at ideaison worked their butts off to curate an incredible and magical experience for their clients, and it was an absolute dream to experience it.
-          </p>
-          <p class="author">
-            Gil from Riotgirlproject</p>
+            <%= testimonial.quote.html_safe %>
+          <p class="author"><%= testimonial.author %></p>
         </div>
-      </div>
-      <div class="item">
-        <div class="quote">
-          <p>
-            Ideaison was beyond a pleasure to work with on all fronts. They led the charge on the creative process, communicated as a team with a serious punch of professionalism, delivered on time, and their hard work on the front lines was impressive to say the least.
-            <br />
-            <br />
-Anytime we have a project where a creative marketing team is needed, they will be top of mind. Always pushing the forefronts of the experiential market, they're the type of team we'd want in the trenches with us - time and again.
-    <br />
-    <br />
-Ideaison was that amazing creative partner, with impactful connections, out of the box ideas and delivered a never ending flow of event genius. That type of offering is hard to find, and so so valuable!
-
-          </p>
-          <p class="author">
-            Gil from Riotgirlproject</p>
-        </div>
-
       </div>
       <% end %>
 

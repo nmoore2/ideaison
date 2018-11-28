@@ -11,6 +11,7 @@ class VisitorsController < ApplicationController
   def index
     @portfolios = Portfolio.all
     @services = Service.all
+    @testimonials = Testimonial.all
   end
 
   def about
