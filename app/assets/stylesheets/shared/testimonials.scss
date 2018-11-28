@@ -50,16 +50,15 @@
         color: #fff;
         font-size: 250px;
         color: #fff;
+        top: -80px;
       }
       &:after {
         content: "\201D";
         right: -100px;
-        bottom: -170px;
       }
       &:before {
         content: "\201C";
         left: -100px;
-        top: -80px;
       }
     }
   }
