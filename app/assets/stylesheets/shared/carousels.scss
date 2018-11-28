@@ -22,3 +22,20 @@
 .slick-draggable {
   cursor: pointer;
 }
+
+.slick-dots {
+  bottom: -35px;
+}
+.slick-dots li button:before {
+  font-size: 27px !important;
+  color: #fff;
+
+  @media screen and (max-width: 767px) {
+    font-size: 50px !important;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: $pink !important;
+  opacity: 1 !important;
+}

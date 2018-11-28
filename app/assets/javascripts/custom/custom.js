@@ -5,6 +5,7 @@ var nextArrow = '<svg class="next" xmlns="http://www.w3.org/2000/svg" xmlns:xlin
 $(document).ready(function() {
   $('.testimonials-carousel').slick({
     prevArrow: previousArrow,
-    nextArrow: nextArrow
+    nextArrow: nextArrow,
+    dots: true
   })
 });

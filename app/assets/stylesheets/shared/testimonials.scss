@@ -1,6 +1,6 @@
 .testimonials {
   padding: 30px 0;
-  height: 650px;
+  height: 625px;
   background: asset-url('bg/person-far.jpg') center center no-repeat;
   background-size: cover;
   .titles {
@@ -18,13 +18,12 @@
   }
   .item {
     position: relative;
-    height: 400px;
+    height: 385px;
     // width: 800px;
     .quote {
       padding: 0 20px;
       background: transparent;
       color: #fff;
-      // background: rgba(255,255,255,0.9);
       text-align: center;
       width: 825px;
       position: absolute;
