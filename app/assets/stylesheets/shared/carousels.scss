@@ -25,13 +25,16 @@
 
 .slick-dots {
   bottom: -35px;
+  @media screen and (max-width: 767px) {
+    bottom: 50px;
+  }
 }
 .slick-dots li button:before {
   font-size: 27px !important;
   color: #fff;
 
   @media screen and (max-width: 767px) {
-    font-size: 50px !important;
+    font-size: 40px !important;
   }
 }
 

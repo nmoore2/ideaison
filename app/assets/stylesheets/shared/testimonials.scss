@@ -64,3 +64,39 @@
     }
   }
 }
+
+@media screen and (max-width: 1020px) {
+  .testimonials {
+    height: 800px;
+    .testimonials-carousel {
+      margin-top: 0;
+    }
+    .slick-arrow {
+      display: none !important;
+    }
+    .item {
+      height: 500px;
+      .quote {
+          margin-top: 0px;
+          width: 70%;
+          &:after, &:before {
+            font-size: 135px;
+            top: 0;
+
+          }
+          &:before {
+            left: -16%;
+          }
+          &:after {
+            right: -16%;
+          }
+          p, p.author {
+            font-size: 18px !important;
+          }
+      }
+    }
+    .slick-dots {
+      bottom: -39px;
+    }
+  }
+}
