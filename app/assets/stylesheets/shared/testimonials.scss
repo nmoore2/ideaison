@@ -1,0 +1,67 @@
+.testimonials {
+  padding: 30px 0;
+  height: 700px;
+  background: asset-url('bg/person-far.jpg') center center no-repeat;
+  background-size: cover;
+  .titles {
+    float: none;
+    .title-bg {
+      background-image: asset-url('bg/title-bg.png');
+    }
+    h3 {
+      color: #fff;
+    }
+  }
+  .testimonials-carousel {
+    // height: 300px;
+    margin-top: -50px;
+  }
+  .item {
+    position: relative;
+    height: 500px;
+    // width: 800px;
+    .quote {
+      padding: 20px;
+      background: transparent;
+      color: #fff;
+      // background: rgba(255,255,255,0.9);
+      text-align: center;
+      width: 800px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      // -webkit-box-shadow: 0px 10px 68px -8px rgba(0,0,0,0.75);
+      // -moz-box-shadow: 0px 10px 68px -8px rgba(0,0,0,0.75);
+      // box-shadow: 0px 10px 68px -8px rgba(0,0,0,0.75);
+      p {
+        font-size: 22px !important;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 0.4px;
+      }
+      p.author {
+        font-size: 18px !important;
+        text-transform: uppercase;
+        margin-top: 35px;
+      }
+      &:after, &:before {
+        font-weight: normal;
+        position: absolute;
+        color: #fff;
+        font-size: 250px;
+        color: #fff;
+      }
+      &:after {
+        content: "\201D";
+        right: -100px;
+        bottom: -170px;
+      }
+      &:before {
+        content: "\201C";
+        left: -100px;
+        top: -80px;
+      }
+    }
+  }
+}

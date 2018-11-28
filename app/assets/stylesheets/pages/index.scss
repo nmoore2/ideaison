@@ -34,6 +34,7 @@
 
 #mouse-message {
   display: none;
+  font-size: 16px;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
   position: fixed;
@@ -85,6 +86,7 @@
 
 .recent-works {
   padding: 75px 0 100px;
+  float: none;
   .works-filter {
     li {
       a {
@@ -98,6 +100,7 @@
 
 .clients {
   padding-bottom: 75px;
+  float: none;
   ul {
     display: flex;
     flex-wrap: wrap;
