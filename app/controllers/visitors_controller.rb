@@ -48,6 +48,7 @@ class VisitorsController < ApplicationController
   def portfolio
     @portfolios = Portfolio.all
     @services = Service.all
+    @testimonials = Testimonial.all
   end
 
 end
