@@ -120,6 +120,13 @@
 .quote-bar {
   background: asset-url('bg/landing-bg-3-rotate.jpg') top center no-repeat;
   background-size: cover;
+  h4 {
+    font-size: 39px;
+  }
+  p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
 }
 
 .recent-news .news-box .news-content {
