@@ -12,7 +12,7 @@
   <ul class="works-grid spaced">
     <% @portfolios.order(:placement).each do |item| %>
     <li class="<%= Service.find(item.service_id).title.parameterize rescue '' %>">
-      <div class="coddle__box launch-lightbox">
+      <div class="coddle__box launch-lightbox <%= 'private-item' if item.private %>">
         <figure class="coddle__box__figure">
           <div class="reveal-effect se2-white wow" data-aos="slide-effect">
             <%= image_tag item.thumbnail.url, class: 'img-fluid coddle__box__image'  %>
@@ -24,7 +24,11 @@
             <h4 class="coddle__box__title">
               <%= item.title %>
             </h4>
+            <% if item.private %>
+            <p class="coddle__box__description">Please contact us to view this content</p><a class="idea idea-btn launch-contact-modal">Request Access</a>
+            <% else %>
             <p class="coddle__box__description"><%= Service.find(item.service_id).title rescue ''  %></p>
+            <% end %>
           </figcaption>
         </figure>
         <div class="item-data" style="display: none;">

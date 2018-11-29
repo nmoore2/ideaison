@@ -31,3 +31,25 @@
   text-transform: uppercase;
   font-size: 18px;
 }
+
+.coddle__box__caption {
+  padding-top: 20%;
+}
+
+.private-item {
+  .coddle__box__figure:hover {
+    .coddle__box__image {
+      filter: brightness(0.2);
+      -webkit-filter: brightness(0.2);
+    }
+ }
+}
+.private-item {
+  .idea-btn {
+    margin-top: 20px;
+    &:hover {
+      color: #000 !important;
+    }
+
+  }
+}

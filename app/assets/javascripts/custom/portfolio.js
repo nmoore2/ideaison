@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  $('.private-item').unbind('click');
+  $('.private-item .coddle__box__caption, .private-item .coddle__box_figure').unbind();
+})
 var $portfolioImages = $('.portfolio-images');
 
 var createCarousel = function() {

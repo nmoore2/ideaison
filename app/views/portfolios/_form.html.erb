@@ -20,7 +20,16 @@
         <%= f.input :placement, input_html: {style: 'max-width: 70px;'} %>
       </div>
     </div>
-      <%= f.input :service_id, as: :select,  required: true, collection: Service.order(:title).all.collect {|c| [ c.title.to_s, c.id ] }, include_blank: true, label: 'Category', input_html: { class: 'form-control' } %>
+    <div class="row">
+      <div class="col-md-10">
+        <%= f.input :service_id, as: :select,  required: true, collection: Service.order(:title).all.collect {|c| [ c.title.to_s, c.id ] }, include_blank: true, label: 'Category', input_html: { class: 'form-control' } %>
+
+      </div>
+      <div class="col-md-2">
+        <!-- <label>Private</label> -->
+        <%= f.input :private %>
+      </div>
+      </div>
       <%= f.input :description, as: :ckeditor, label: 'Summary' %>
       <%= f.input :people, as: :ckeditor %>
       <%= f.input :ideas, as: :ckeditor %>
