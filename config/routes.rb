@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/what-we-do', to: 'visitors#services'
   get '/our-work', to: 'visitors#portfolio'
   get '/blog', to: 'visitors#blog'
+  get '/private/our-work', to: 'visitors#portfolio_protected'
 
   root to: 'visitors#index'
 end

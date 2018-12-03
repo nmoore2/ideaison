@@ -1,11 +1,9 @@
 class VisitorsController < ApplicationController
   require "uri"
   require "net/http"
-  require "net/https"
   require 'json'
   require 'openssl'
-  require 'httparty'
-
+  before_action :authenticate, only: :portfolio_protected
 
 
   def index
@@ -49,6 +47,20 @@ class VisitorsController < ApplicationController
     @portfolios = Portfolio.all
     @services = Service.all
     @testimonials = Testimonial.all
+  end
+
+  def portfolio_protected
+    @portfolios = Portfolio.all
+    @services = Service.all
+    @testimonials = Testimonial.all
+  end
+
+  private
+
+  def authenticate
+   authenticate_or_request_with_http_basic('Administration') do |username, password|
+     username == 'ideaison' && password == 'portfolio'
+   end
   end
 
 end
