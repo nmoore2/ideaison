@@ -107,11 +107,16 @@
     justify-content: center;
     li {
       height: 125px;
+      width: 20%;
       display: inline-grid;
+      padding: 15px;
+      a {
+        display: contents;
+      }
       img {
         max-height: 100%;
         margin: auto;
-        max-width: 120px;
+        max-width: 130px;
       }
     }
   }
