@@ -174,12 +174,13 @@
   }
   .main-features {
     .feature-box {
-      width: calc(100% - 20px);
+      width: calc(100% - 10px);
       margin: 0 auto 50px auto;
     }
   }
   .recent-works {
     .works-grid {
+      min-height: 600px;
       li {
         width: 100% !important;
       }

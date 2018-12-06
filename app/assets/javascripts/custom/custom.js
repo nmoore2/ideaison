@@ -10,6 +10,7 @@ $(document).ready(function() {
   $('.testimonials-carousel').slick({
     prevArrow: previousArrow,
     nextArrow: nextArrow,
-    dots: true
+    dots: true,
+    adaptiveHeight: true
   })
 });

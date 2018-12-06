@@ -66,23 +66,27 @@
 
 @media screen and (max-width: 1020px) {
   .testimonials {
-    height: 1000px;
+    min-height: 900px;
     .testimonials-carousel {
-      margin-top: 0;
-      height: 900px;
+      margin-top: 60px;
     }
     .slick-arrow {
       display: none !important;
     }
     .item {
-      height: 500px;
+      height: auto;
       .quote {
+          position: relative;
+          transform: none;
           margin-top: 0px;
           width: 70%;
+          left: 0;
+          top: 0;
+          padding: 0 10px;
+          margin: 0 auto;
           &:after, &:before {
             font-size: 135px;
             top: 0;
-
           }
           &:before {
             left: -16%;
