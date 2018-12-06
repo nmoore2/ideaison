@@ -30,16 +30,10 @@ p, a, li {
     font-size: 18px;
     margin-bottom: 0;
 }
-// .preloader {
-//   // background: asset-url('bg/preloader-bg.jpg') center center no-repeat;
-//   background-size: cover;
-//   background-color: $pink;
-//   .spinner {
-//     .path {
-//       stroke: #fff;
-//     }
-//   }
-// }
+
+body.hide-overflow {
+  overflow: hidden !important;
+}
 
 #preloader, .transition-overlay {
     position: fixed;
@@ -152,5 +146,37 @@ p, a, li {
     height: 25px;
     width: 30px;
     fill: #fff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hidden-xs {
+    display: none;
+  }
+  #preloader {
+    img {
+      left: 38%;
+    }
+  }
+  .titles {
+    h3 {
+      letter-spacing: 0px;
+    }
+    .title-bg {
+
+    }
+  }
+  .close-icon {
+    right: 20px;
+    top: 20px;
+    svg {
+      height: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .visible-xs {
+    display: none;
   }
 }

@@ -8,9 +8,6 @@
   background-size: cover;
   position: relative;
   max-width: 100%;
-  // cursor: asset-url('icons/paintbrushes/1-02.svg'), auto;
- // cursor: asset-url('icons/paintbrushes/1-03.png'), auto;
- // cursor: asset-url('icons/paintbrush-1.png'), auto;
 }
 
 .text-overlay {
@@ -40,9 +37,7 @@
   position: fixed;
   transform: translateX(-50%) translateY(-50%);
 }
-.side-content {
 
-}
 .index {
   .main-features {
     background: asset-url('bg/services-bg-1.jpg') center center no-repeat;
@@ -144,5 +139,60 @@
   h3 {
     background: linear-gradient(135deg, $pink 0%, $dark-pink 100%);
     -webkit-background-clip: text;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .clients {
+    ul li {
+      width: 33%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text-overlay {
+    left: 20px;
+    top: 54%;
+    max-width: calc(100vw - 40px);
+    h2 {
+      letter-spacing: 2px;
+      font-size: 46px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .inner {
+    background-position: left top;
+  }
+  .side-image-content {
+    padding: 30px 0 100px;
+  }
+  .main-features {
+    .feature-box {
+      width: calc(100% - 20px);
+      margin: 0 auto 50px auto;
+    }
+  }
+  .recent-works {
+    .works-grid {
+      li {
+        width: 100% !important;
+      }
+      .coddle__box__description {
+        font-size: 16px;
+      }
+      .coddle__box__caption {
+        padding-top: 50px;
+      }
+      .coddle__box__title {
+        font-size: 29px;
+        padding: 0 20px;
+      }
+    }
   }
 }

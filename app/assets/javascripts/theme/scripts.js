@@ -210,7 +210,21 @@
 		// HAMBURGER MENU
 		$('.hamburger-menu').on('click', function(e) {
 			$(this).toggleClass("open")
-			$(".hamburger-menu-box").toggleClass("show-me")
+			$(".hamburger-menu-box, .header").toggleClass("show-me");
+
+			// // Disable scrolling.
+			document.ontouchmove = function (e) {
+				e.preventDefault();
+			}
+
+
+			$('body').toggleClass('hide-overflow');
+			if (!$('body').hasClass('hide-overflow')) {
+				// // Enable scrolling.
+				document.ontouchmove = function (e) {
+					return true;
+				}
+			}
 			});
 
 

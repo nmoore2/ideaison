@@ -5,7 +5,7 @@
   }
 }
 .header {
-  height: auto;
+  // height: auto;
   background-color: transparent;
   // background-color: $dark-pink;
 }
@@ -84,6 +84,9 @@
           text-shadow: none;
         }
       }
+      .hamburger-menu span {
+        background: $dark-pink;
+      }
   }
 }
 
@@ -98,4 +101,80 @@
       // margin-top: -5px;
     }
   }
+}
+
+//mobile nav
+.hamburger-menu {
+  span {
+    &:nth-child(1) {
+      width: 17px;
+      right: 15px;
+      top: 14px;
+    }
+    &:nth-child(2) {
+      width: 27px;
+      right: 10px;
+    }
+    &:nth-child(3) {
+      width: 17px;
+      right: 15px;
+      top: 30px;
+    }
+  }
+  &.open {
+    span {
+      &:nth-child(1), &:nth-child(3) {
+        width: 24px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+.hamburger-menu-box {
+  background: asset-url('bg/person-far.jpg') bottom center no-repeat;
+}
+
+
+@media screen and (max-width: 767px) {
+  .header.show-me {
+    .navbar.stick-me {
+      background: transparent;
+      border-bottom: none;
+      .hamburger-menu span {
+        background: #fff;
+      }
+      .logo-colored {
+        display: none !important ;
+      }
+      .logo-light {
+        display: block;
+      }
+    }
+  }
+  .navbar {
+    // padding: 10px 20px;
+    .custom-btn {
+      padding: 0 25px;
+      letter-spacing: 0px;
+    }
+    .logo {
+      a {
+        img {
+          height: 38px;
+        }
+      }
+    }
+  }
+  .hamburger-menu-box {
+    padding-top: 120px;
+    justify-content: start;
+    .menu .navbar-nav {
+      text-align: center;
+      .nav-item .nav-link {
+        font-size: 20px;
+      }
+    }
+  }
+
 }

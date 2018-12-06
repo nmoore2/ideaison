@@ -1,6 +1,6 @@
 .contact-modal {
   background: rgba(153,0,146, 0.95);
-  background: asset-url('bg/landing-bg-3-rotate.jpg') top center no-repeat;
+  background: asset-url('bg/person-far.jpg') bottom center no-repeat;
   position: fixed;
   top: 0;
   left: 0;
@@ -93,5 +93,39 @@
       *:focus::-moz-placeholder { opacity: 0; } /* FF 19-50 */
       *:focus:-ms-input-placeholder { opacity: 0; } /* IE 10+ */
       *:focus::placeholder { opacity: 0; } /* Modern Browsers */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-modal {
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    .form-wrapper {
+      min-width: 90%;
+    }
+    .close-icon {
+      top: 20px;
+      right: 20px;
+    }
+    .form-wrapper {
+      h1 {
+        font-size: 38px;
+      }
+      input, textarea {
+        font-size: 16px;
+        &:focus {
+          border: 1px solid #eee;
+        }
+      }
+      .form-control {
+        height: 50px;
+      }
+      label:not(.error) {
+        font-size: 16px;
+      }
+      label {
+        margin-bottom: 0;
+      }
+    }
   }
 }

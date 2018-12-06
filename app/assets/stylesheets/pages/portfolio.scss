@@ -53,3 +53,32 @@
 
   }
 }
+
+@media screen and (max-width: 768px) {
+  .portfolio-item {
+    padding-top: 50px;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    .title {
+      padding-bottom: 0;
+      margin-top: -35px;
+
+    }
+    .portfolio-images {
+      margin-top: 20px;
+      height: 300px;
+      img {
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
+    }
+    .text-box {
+      margin-bottom: 30px;
+      &.no-border-left {
+        border-left: 1px solid $lightest-pink;
+      }
+    }
+  }
+
+}

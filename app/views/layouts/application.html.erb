@@ -34,7 +34,8 @@
     <div id="preloader">
         <%= image_tag asset_url('logos/ideaison-a.png'), class: 'center' %>
     </div>
-    <%= render 'layouts/navigation' %>
+    <%= render 'shared/mobile_nav' %>
+    <%= render 'shared/navigation' %>
     <% if notice.present? %>
       <p id="notice"><%= notice %></p>
     <% end %>
@@ -43,6 +44,8 @@
    <%= render 'shared/footer' %>
    <%= render 'shared/portfolio_overlay' %>
    <%= render 'shared/contact-modal' %>
+
+   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <%= javascript_include_tag 'application' %>
     <script>
     	// PRELOADER
