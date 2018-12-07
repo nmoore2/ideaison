@@ -6,11 +6,11 @@
 <section class="intro-coddle people">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-6">
 				<div class="titles"> <span class="title-bg"></span>
-          <h3>ABOUT... THE PEOPLE</h3>
+          <h3>ABOUT... <br class="visible-xs"/>THE PEOPLE</h3>
         </div>
+        <%= image_tag 'about/ideaison-team.jpg', class: 'visible-xs rounded-circle' %>
     <!-- end titles -->
         <p>We’re all working together for someone, right? You may call them fans, customers, users, or a target audience. Our preferred terminology is just “people”. In most cases with our work, we’re doing what we do for <strong>Millenial and Gen Z people.</strong>
           <br />
@@ -19,7 +19,7 @@
         </p>
     <!-- end article -->
 			</div>
-      <div class="col-md-6 team-photo">
+      <div class="col-md-6 team-photo hidden-xs">
         <%= image_tag 'about/ideaison-team.jpg' %>
       </div>
 		</div>
@@ -66,59 +66,5 @@
   <% end %>
 </div>
 
-</section>
-<section class="intro-coddle partners">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-10">
-				<div class="titles"> <span class="title-bg"></span>
-          <h3>ABOUT... OUR PARTNERS</h3>
-        </div>
-    <!-- end titles -->
-        <p>Our approach often includes bringing in <strong>talented people who others look up to and learn from.</strong>
-          <br />
-          <br />
-        We love <strong>introducing underrepresented, diverse voices into the conversation</strong>— women, people of color, the LGBTQIA community… anyone who has a story to tell but who doesn’t always have the platform to tell it.
-          <br />
-          <br />
-        We’re already spending our time immersed in the culture of the industries we specialize in, so if a project calls for (jargon alert!) an “influencer”... we can find that perfect someone for the job.
-        </p>
-    <!-- end article -->
-			</div>
-			<!-- end col-10 -->
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
-</section>
-<section class="clients">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <!-- end titles -->
-        <ul>
-          <li><%= image_tag 'clients/420otb-transparent.png' %></li>
-          <li><%= image_tag 'clients/1906.jpg' %></li>
-          <li><%= image_tag 'clients/bte.jpg' %></li>
-          <li><%= image_tag 'clients/cannabition.jpg' %></li>
-          <li><%= image_tag 'clients/collaborative.jpg' %></li>
-          <li><%= image_tag 'clients/google.jpg' %></li>
-          <li><%= image_tag 'clients/hatchery.jpg' %></li>
-          <li><%= image_tag 'clients/insomniac.jpg' %></li>
-          <li><%= image_tag 'clients/mhp.jpg' %></li>
-          <li><%= image_tag 'clients/my420tours.jpg' %></li>
-          <li><%= image_tag 'clients/pbs.jpg' %></li>
-          <li><%= image_tag 'clients/soco.jpg' %></li>
-          <li><%= image_tag 'clients/superfly.jpg' %></li>
-          <li><%= image_tag 'clients/tgs.jpg' %></li>
-          <li><%= image_tag 'clients/we-them-us.jpg' %></li>
-          <li><%= image_tag 'clients/wreath.png' %></li>
-        </ul>
-      </div>
-      <!-- end col-12 -->
-    </div>
-    <!-- end row -->
-  </div>
-  <!-- container -->
 </section>
 <%= render 'shared/work-together' %>

@@ -153,6 +153,9 @@ body.hide-overflow {
   .hidden-xs {
     display: none;
   }
+  p {
+    font-size: 18px;
+  }
   #preloader {
     img {
       left: 38%;
@@ -160,6 +163,7 @@ body.hide-overflow {
   }
   .titles {
     h3 {
+      margin-bottom: 100px;
       letter-spacing: 0px;
     }
     .title-bg {
@@ -178,5 +182,22 @@ body.hide-overflow {
 @media screen and (min-width: 767px) {
   .visible-xs {
     display: none;
+  }
+
+}
+
+@media screen and (max-width: 321px) {
+  .recent-works .works-grid.spaced {
+    .coddle__box__caption {
+      padding-top: 25px;
+    }
+    .coddle__box__title {
+      font-size: 24px;
+    }
+  }
+  .private-item {
+    .idea {
+      margin-top: 10px;
+    }
   }
 }

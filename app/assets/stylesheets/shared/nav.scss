@@ -145,7 +145,7 @@
     font-size: 18px;
   }
   .social-icons {
-    margin-top: 30px;
+    margin-top: 40px;
     display: inline-block;
     i {
       font-size: 25px;
@@ -156,6 +156,9 @@
     // transform: translateX(-50%);
     // left: 50%;
     // bottom: 20px;
+  }
+  .menu {
+    padding-top: 70px;
   }
 }
 
@@ -170,6 +173,9 @@
 
 @media screen and (max-width: 767px) {
   .header.show-me {
+    a.launch-contact-modal {
+        // display: none;
+    }
     .navbar.stick-me {
       background: transparent;
       border-bottom: none;
