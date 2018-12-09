@@ -108,11 +108,6 @@
       position: relative;
       height: 100%;
     }
-    .no-border-left {
-      ul {
-        padding-left: 10px;
-      }
-    }
     h1, p, li, ol {
       color: #fff;
     }
@@ -146,4 +141,14 @@
 
 .coddle__box__figure {
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    .no-border-left {
+    ul {
+        padding-left: 10px;
+      }
+    }
+  }
 }
