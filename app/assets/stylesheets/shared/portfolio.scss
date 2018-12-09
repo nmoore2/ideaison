@@ -23,7 +23,7 @@
         border-top: none;
       }
       &.margin-top {
-        margin-top: 40px;
+        margin-top: 30px;
       }
       &.dark {
         // background-color:rgba(0, 0, 0, 0.1);
@@ -71,10 +71,13 @@
       height: 100px;
     }
     .portfolio-images {
-      margin-top: 40px;
+      margin-top: 20px;
       height: 500px;
       // border: 1px solid $lightest-pink;
       // margin-top: 30px;
+      .slick-dots {
+        bottom: 20px;
+      }
       img {
         // margin: 0 auto;
         width: auto;
@@ -104,6 +107,11 @@
     .img-wrap {
       position: relative;
       height: 100%;
+    }
+    .no-border-left {
+      ul {
+        padding-left: 10px;
+      }
     }
     h1, p, li, ol {
       color: #fff;

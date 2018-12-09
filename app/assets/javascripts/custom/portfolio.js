@@ -40,14 +40,11 @@ $('.launch-lightbox').on('click', function() {
 
 });
 
-$('.close-icon').click(function() {
+$('.portfolio.close-icon').click(function() {
   $portfolioImages.slick("unslick");
-})
-
-
-$('.close-icon').click(function() {
   $('.portfolio-item').fadeOut('fast');
 })
+
 //
 // $(".text-side").mCustomScrollbar({
 //   // advanced:{ updateOnContentResize: true },
