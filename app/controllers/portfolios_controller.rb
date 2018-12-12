@@ -43,6 +43,7 @@ class PortfoliosController < ApplicationController
   # PATCH/PUT /portfolios/1
   # PATCH/PUT /portfolios/1.json
   def update
+    @images = @portfolio.images
     respond_to do |format|
       if @portfolio.update(portfolio_params)
         format.html { redirect_to edit_portfolio_path(@portfolio), notice: 'Portfolio was successfully updated.' }

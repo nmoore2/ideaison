@@ -14,8 +14,8 @@
     <li class="<%= Service.find(item.service_id).title.parameterize rescue '' %>">
       <div class="coddle__box launch-lightbox <%= 'private-item' if item.private %>">
         <figure class="coddle__box__figure">
-          <div class="reveal-effect se2-white wow" data-aos="slide-effect">
-            <%= image_tag item.thumbnail.url, class: 'img-fluid coddle__box__image'  %>
+          <div class="reveal-effect se2-white wow thumb-img" data-aos="slide-effect" style="background-image: url(<%= asset_url(item.thumbnail.url) %>)">
+            <%# image_tag item.thumbnail.url, class: 'img-fluid coddle__box__image'  %>
           </div>
           <div class="coddle__box__deco coddle__box__deco--shine">
             <div></div>
