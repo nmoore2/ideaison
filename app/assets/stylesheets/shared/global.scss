@@ -156,6 +156,12 @@ body.hide-overflow {
   p {
     font-size: 18px;
   }
+  .titles {
+    h3 {
+      font-size: 42px;
+      letter-spacing: -1.5px !important;
+    }
+  }
   #preloader {
     img {
       left: 38%;
@@ -183,7 +189,11 @@ body.hide-overflow {
   .visible-xs {
     display: none;
   }
-
+}
+@media screen and (min-width: 300px) {
+  .visible-xxs {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 321px) {

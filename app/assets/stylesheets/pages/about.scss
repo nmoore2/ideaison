@@ -1,6 +1,4 @@
 .intro-coddle {
-  // background: asset-url('bg/services-bg-1.jpg') center center no-repeat;
-  background-size: cover;
   &.partners {
     padding-top: 0;
   }
@@ -38,7 +36,9 @@
     font-size: 22px;
   }
   img {
-    box-shadow: 1px 3px 10px 1px rgba(0,0,0,0.5);
+    max-width: 120%;
+    margin-left: -25px;
+    margin-top: -45px;
   }
   p {
     margin-bottom: 0;
@@ -57,13 +57,11 @@ a.read-more {
 
 @media screen and (max-width: 767px) {
   .intro-coddle {
+    padding: 20px 0 50px;
     .team-photo {
       img {
         max-width: 100%;
       }
-    }
-    .titles .title-bg {
-      margin-bottom: -161px;
     }
     .team-photo {
       img {
@@ -82,16 +80,22 @@ a.read-more {
     p {
       padding: 0 15px;
     }
+    h2 {
+      letter-spacing: -1px;
+    }
+  }
+  .page-info {
+    padding: 20px;
   }
   .person {
     padding: 0;
     margin-right: -15px;
     margin-left: -15px;
-    margin-bottom: 20px;
     border-bottom: none !important;
     img {
       border-radius: 0.25rem;
-      margin-bottom: 30px;
+      max-width: 100%;
+      margin: 0 auto;
     }
     h3 {
       margin-bottom: 15px;
@@ -102,5 +106,11 @@ a.read-more {
   }
   a.read-more {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .titles .title-bg {
+    margin-bottom: -161px;
   }
 }
