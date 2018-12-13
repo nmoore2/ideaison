@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_074946) do
+ActiveRecord::Schema.define(version: 2018_12_13_211319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_074946) do
     t.text "proud_of"
     t.text "cherry_on_top"
     t.boolean "private"
+    t.integer "service_id_2"
     t.index ["service_id"], name: "index_portfolios_on_service_id"
   end
 
