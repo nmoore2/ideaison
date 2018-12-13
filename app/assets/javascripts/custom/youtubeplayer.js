@@ -1,3 +1,9 @@
+$('.play-icon').on('click', function() {
+
+  $('#lightbox').show();
+  console.log('foo')
+
+})
 var tag = document.createElement('script');
 // 2. This code loads the IFrame Player API code asynchronously.
      var tag = document.createElement('script');
@@ -13,7 +19,7 @@ var tag = document.createElement('script');
        player = new YT.Player('player', {
          height: '600',
          width: '100%',
-         videoId: $('.player').data('video-id'),
+         videoId: $('#player').data('video-id'),
          events: {
            'onReady': onPlayerReady,
            'onStateChange': onPlayerStateChange
