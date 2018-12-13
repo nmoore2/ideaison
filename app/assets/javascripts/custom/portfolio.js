@@ -23,7 +23,7 @@ $('.launch-lightbox').on('click', function() {
   var threeThings = itemText.data('three-things');
   var cherry = itemText.data('cherry');
   var description = itemText.data('description');
-
+  console.log($(this).find('.item-text').data('title'));
   $('#project-title').html(title);
   $('#people').html(people);
   $('#ideas').html(ideas);

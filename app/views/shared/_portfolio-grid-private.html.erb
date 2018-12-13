@@ -3,14 +3,8 @@
     <h3>RECENT WORK</h3>
   </div>
   <!-- end titles -->
-  <!-- <ul class="works-filter">
-    <li><a href="#" data-filter="*" class="current">ALL</a> </li>
-    <% @services.order(:placement).each do |service| %>
-      <li><a href="#" data-filter=".<%= service.title.parameterize %>"><%= service.title.upcase %></a> </li>
-    <% end %>
-  </ul> -->
   <ul class="works-grid spaced">
-    <% @portfolios.order(:placement).each do |item| %>
+    <% @portfolios.order(:placement).each_with_index do |item, i| %>
     <li class="<%= Service.find(item.service_id).title.parameterize rescue '' %>">
       <div class="coddle__box launch-lightbox">
         <figure class="coddle__box__figure">
@@ -41,7 +35,7 @@
               <% end %>
             <% end %>
           </div>
-          <div class="item-text"
+          <div class="item-text" id="this-text"
             data-title="<%= item.title %>"
             data-description="<%= item.description %>"
             data-people="<%= item.people %>"

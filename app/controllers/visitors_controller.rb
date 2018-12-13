@@ -41,18 +41,15 @@ class VisitorsController < ApplicationController
 
   def services
     @services = Service.all
+    @testimonials = Testimonial.all
   end
 
   def portfolio
     @portfolios = Portfolio.all
-    @services = Service.all
-    @testimonials = Testimonial.all
   end
 
   def portfolio_protected
     @portfolios = Portfolio.all
-    @services = Service.all
-    @testimonials = Testimonial.all
   end
 
   private

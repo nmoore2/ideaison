@@ -1,9 +1,3 @@
-$('.play-icon').on('click', function() {
-
-  $('#lightbox').show();
-  console.log('foo')
-
-})
 var tag = document.createElement('script');
 // 2. This code loads the IFrame Player API code asynchronously.
      var tag = document.createElement('script');
