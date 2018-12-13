@@ -437,10 +437,10 @@ button[type="submit"] { height: 52px; display: inline-block; border: none; backg
   .side-image-content .side-content { padding: 0 calc(25vw - 220px); }
   .main-features .feature-box { padding: 30px 10px; } }
 /* RESPONSIVE TABLET FIXES */
-@media only screen and (max-width: 991px), only screen and (max-device-width: 991px) { .navbar .navbar-nav { display: none; }
+@media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
   .hamburger-menu-box .inner { display: none; }
   .hamburger-menu-box .menu { display: block; }
-  .hamburger-menu-box .menu .navbar-nav { text-align: right; }
+  .hamburger-menu-box .menu .navbar-nav { text-align: center; }
   .hamburger-menu-box .menu .navbar-nav .nav-item .nav-link { font-size: 26px; }
   .side-image-content { flex-direction: column; }
   .side-image-content .side-image { padding: 0 60px; margin: 60px 0; }

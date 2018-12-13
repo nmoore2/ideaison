@@ -9,7 +9,8 @@
     img {
       border-radius: 100px;
       margin: 60px auto 0 auto;
-      max-width: 540px;
+      width: 540px;
+      max-width: 100%;
     }
   }
 }
@@ -84,9 +85,6 @@ a.read-more {
       letter-spacing: -1px;
     }
   }
-  .page-info {
-    padding: 30px 20px 0;
-  }
   .person {
     padding: 0;
     margin-right: -15px;
@@ -112,5 +110,11 @@ a.read-more {
 @media screen and (max-width: 374px) {
   .titles .title-bg {
     margin-bottom: -161px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page-info {
+    padding: 30px 20px 0;
   }
 }

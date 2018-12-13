@@ -193,6 +193,17 @@ body.hide-overflow {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .visible-sm {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 767px) {
   .visible-xs {
     display: none;

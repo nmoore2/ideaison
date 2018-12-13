@@ -152,6 +152,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .portfolio-item .text-box.margin-top {
+    margin-top: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .portfolio-item {
     .no-border-left {
