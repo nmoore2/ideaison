@@ -105,9 +105,19 @@
   <!-- end container -->
 </section>
 
+
+
+
 <%= render 'shared/portfolio-grid' %>
-<%= render 'shared/testimonials_carousel' %>
+<% unless browser.device.mobile? %>
+  <%= render 'shared/testimonials_carousel' %>
+<% end %>
 <%= render 'shared/partners' %>
+
+<% if browser.device.mobile? %>
+  <%= render 'shared/testimonials_carousel' %>
+<% end %>
+
 <!-- end clients -->
 <% if false %>
 <section class="recent-news">

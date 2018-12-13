@@ -16,6 +16,7 @@ gem "mini_magick"
 gem 'cloudinary'
 gem 'file_validators'
 gem 'httparty'
+gem 'browser'
 
 
 group :development, :test do

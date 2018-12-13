@@ -290,7 +290,7 @@
 
 
 		// WORKS GRID
-		$(window).on('load',function(e){
+		$(document).ready(function() {
 			$('.works-grid').isotope({
 			  itemSelector: '.works-grid li',
 			  percentPosition: true,
