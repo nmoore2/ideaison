@@ -38,3 +38,16 @@
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .about {
+    .page-title {
+      background-position: 0 0;
+    }
+  }
+  .portfolio, .portfolio_protected {
+    .page-title {
+      background-position: center center;
+    }
+  }
+}
