@@ -6,22 +6,24 @@
   }
 }
 
-.recent-works {
-  .works-grid {
-    float: none;
-    li {
-     width: 50%;
-    }
-    &.spaced {
+@media screen and (min-width: 768px) {
+  .recent-works {
+    .works-grid {
+      float: none;
       li {
-        padding-bottom: 30px;
-        &:nth-child(odd) {
-          padding-left: 30px;
-          padding-right: 15px;
-        }
-        &:nth-child(even) {
-          padding-right: 30px;
-          padding-left: 15px;
+       width: 50%;
+      }
+      &.spaced {
+        li {
+          padding-bottom: 30px;
+          &:nth-child(odd) {
+            padding-left: 30px;
+            padding-right: 15px;
+          }
+          &:nth-child(even) {
+            padding-right: 30px;
+            padding-left: 15px;
+          }
         }
       }
     }
@@ -104,4 +106,20 @@
     }
   }
 
+}
+
+@media screen and (max-width: 767px) {
+  .recent-works {
+    height: 800px;
+    .works-grid {
+      li {
+        margin-bottom: 20px;
+      }
+      .coddle__box__figure {
+        .thumb-img {
+          height: 300px;
+        }
+      }
+    }
+  }
 }

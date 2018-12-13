@@ -6,7 +6,7 @@ class ContactMailer < ApplicationMailer
     @contact = contact
     @to = Rails.env.development? ? ["n@nmoore.net"] : ["lauren@ideaison.com", "naomi@ideaison.com"]
     mail( :from => @contact.email, :to => @to,
-    :subject => 'New contact message from ideason.com',
+    :subject => 'New contact message from ideaison.com',
     :bcc => 'nate@nmoore.net')
   end
 
