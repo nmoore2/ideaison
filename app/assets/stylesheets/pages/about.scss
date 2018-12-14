@@ -1,4 +1,10 @@
+.about {
 .intro-coddle {
+  padding-top: 40px;
+  p {
+    max-width: 900px;
+    margin: 0 auto;
+  }
   &.partners {
     padding-top: 0;
   }
@@ -13,7 +19,6 @@
     }
   }
 }
-.about {
   .clients {
     margin-bottom: 50px
   }
