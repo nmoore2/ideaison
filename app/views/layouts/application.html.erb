@@ -41,6 +41,10 @@
     <% if notice.present? %>
       <p id="notice"><%= notice %></p>
     <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    
      <%= yield %>
 
    <%= render 'shared/footer' %>
