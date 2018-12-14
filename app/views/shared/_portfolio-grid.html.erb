@@ -21,7 +21,9 @@
             <% if item.private %>
             <p class="coddle__box__description">Please contact us to view this content</p><a class="idea idea-btn launch-contact-modal">Request Access</a>
             <% else %>
-            <p class="coddle__box__description"><%= Service.find(item.service_id).title rescue ''  %><%= ", #{Service.find(item.service_id_2).title}" rescue ''  %></p>
+            <% @service_1 = Service.find(item.service_id).title rescue '' %>
+            <% @service_2 = Service.find(item.service_id_2).title rescue '' %>
+            <p class="coddle__box__description"><%= @service_1.rstrip %><%= !@service_2.blank? ? ", #{Service.find(item.service_id_2).title}" : ''  %></p>
             <% end %>
           </figcaption>
         </figure>
