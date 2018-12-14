@@ -58,6 +58,7 @@ a.read-more {
 @media screen and (max-width: 767px) {
   .intro-coddle {
     padding: 20px 0 50px;
+    text-align: center;
     .team-photo {
       img {
         max-width: 100%;
@@ -71,9 +72,6 @@ a.read-more {
     }
     .rounded-circle {
       margin-bottom: 40px;
-    }
-    p {
-      text-align: left;
     }
   }
   .page-title {
@@ -103,6 +101,16 @@ a.read-more {
   }
   a.read-more {
     font-size: 18px;
+  }
+  .quote-bar {
+    h4 {
+      font-size: 34px !important;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 18px !important;
+      margin-bottom: 30px;
+    }
   }
 }
 

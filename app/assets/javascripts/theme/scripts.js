@@ -195,14 +195,15 @@
 
 
 		// MAIN FEATURES
-			$('.main-features .more-link').on('click', function(e) {
-			jQuery(this).text('+');
+			$('.feature-box').on('click', function(e) {
+				var moreLink = $(this).find('.more-link');
+					moreLink.text('+');
 			if($('.expand-text').is(':visible')){
-				  jQuery(this).text('+');
-			}else{
-				  jQuery(this).text('-');
+				  moreLink.text('+');
+			} else{
+				  moreLink.text('-');
 			}
-			$(this).siblings(".feature-box .expand-text").slideToggle();
+			$(this).find(".expand-text").slideToggle();
 			return false;
 		});
 
