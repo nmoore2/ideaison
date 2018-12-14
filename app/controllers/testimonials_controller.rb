@@ -1,6 +1,7 @@
 class TestimonialsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
-  layout 'admin'
+  layout 'devise'
 
   # GET /testimonials
   # GET /testimonials.json

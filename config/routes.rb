@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   resources :contacts
 
   devise_for :users
+  devise_scope :user do
+    # get "/users/sign_up",  :to => "visitors#index"
+    get "/admin" => "portfolios#index" # custom path to login/sign_in
+  end
 
   # Public pages
   get '/about', to: 'visitors#about'
