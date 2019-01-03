@@ -17,26 +17,11 @@ class VisitorsController < ApplicationController
   end
 
   def blog
-    @code = params[:code]
-    params = {'grant_type' => 'authorization_code', 'code' => @code, 'redirect_uri' => 'http://localhost:3000/blog', 'client_id' => '78t99ayw8dgyz1', 'client_secret' => '2NgT4jBSYOI4F1kT'
-}
-     if @code.present?
-      # post to LinkedIn to get access_token
-      x = Net::HTTP.post_form(URI.parse('https://www.linkedin.com/oauth/v2/accessToken'), params)
-      puts x.body
-      data = JSON.parse(x.body)
-      @access_token = data["access_token"]
-      puts 'Access token= ' + @access_token
 
-      url = 'https://api.linkedin.com/v2/originalArticles/battling-imposter-syndrom-lauren-kashuk'
-      headers = {
-        authorization: 'Bearer ' + @access_token
-      }
+  end
 
-      response = HTTParty.get(url, headers: headers)
-      puts response.body
+  def blog_detail
 
-    end
   end
 
   def services
