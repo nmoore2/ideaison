@@ -21,11 +21,10 @@ class VisitorsController < ApplicationController
   end
 
   def blog_detail
-
-=======
-    linkedin_api_key = "78t99ayw8dgyz1"
-    secret_key = "2NgT4jBSYOI4F1kT"
-
+    #
+    # linkedin_api_key = "78t99ayw8dgyz1"
+    # secret_key = "2NgT4jBSYOI4F1kT"
+    #
 
 #     @code = params[:code]
 #     params = {'grant_type' => 'authorization_code', 'code' => @code, 'redirect_uri' => 'http://localhost:3000/blog', 'client_id' => '78t99ayw8dgyz1', 'client_secret' => '2NgT4jBSYOI4F1kT'
@@ -46,8 +45,6 @@ class VisitorsController < ApplicationController
 #       response = HTTParty.get(url, headers: headers)
 #       puts response.body
 
-    end
->>>>>>> Stashed changes
   end
 
   def services
