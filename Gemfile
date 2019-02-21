@@ -17,6 +17,7 @@ gem 'cloudinary'
 gem 'file_validators'
 gem 'httparty'
 gem 'browser'
+gem 'buttercms-rails'
 
 
 group :development, :test do
@@ -50,6 +51,7 @@ group :development, :test do
   gem 'faker'
   gem 'pry-rails'
   gem 'pry-rescue'
+  gem 'rb-readline'
   gem 'rspec-rails'
   gem 'rubocop'
 end

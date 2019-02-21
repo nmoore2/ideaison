@@ -1,0 +1,14 @@
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <%= link_to buttercms_post_path(post.slug), :title => post.title do %>
+    <div class="card">
+      <div class="card-img-top" style="background-image: url(<%= post.featured_image if post.featured_image %>)"></div>
+      <div class="card-body">
+        <h4 class="card-title"><%= truncate(post.title, :length => 45, :omission => "...", :escape => false) %></h4>
+
+        <p class="meta"><small><%= Date.parse(post.published).strftime("%e %b %Y") %>&nbsp;&nbsp;|&nbsp;&nbsp;<%= post.author.first_name %> <%= post.author.last_name %></small></p>
+        <p class="card-text"><%= truncate(post.summary, :length => 150, :omission => "...", :escape => false) %></p>
+        <a href="<%= buttercms_post_path(post.slug) %>" class="btn idea-btn pink">View Blog Post</a>
+      </div>
+    </div>
+  <% end %>
+</div>

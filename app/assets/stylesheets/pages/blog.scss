@@ -1,4 +1,4 @@
-.blog {
+.posts {
   .blog-grid {
     padding: 50px 0;
 
@@ -18,9 +18,12 @@
 
 .meta {
   color: $pink;
+  small {
+    font-size: 85%;
+  }
 }
 
-.blog, .blog_detail {
+.posts, .blog_detail {
   a:hover {
       text-decoration: none;
   }
