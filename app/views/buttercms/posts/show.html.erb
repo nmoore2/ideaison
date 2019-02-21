@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-sm-8">
       <h1><%= @post.title %></h1>
-      <p class="meta"><%= Date.parse(@post.published).strftime("%e %b %Y") %> | <%= @post.author.first_name %> <%= @post.author.last_name %></p>
+      <p class="meta"><%= Date.parse(@post.published).strftime("%d %b %Y") %> | <%= @post.author.first_name %> <%= @post.author.last_name %></p>
 
       <%= @post.body.html_safe %>
 
