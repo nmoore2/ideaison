@@ -6,7 +6,7 @@
         <h4 class="card-title"><%= truncate(post.title, :length => 45, :omission => "...", :escape => false) %></h4>
 
         <p class="meta"><small><%= Date.parse(post.published).strftime("%e %b %Y") %>&nbsp;&nbsp;|&nbsp;&nbsp;<%= post.author.first_name %> <%= post.author.last_name %></small></p>
-        <p class="card-text"><%= truncate(post.summary, :length => 150, :omission => "...", :escape => false) %></p>
+        <p class="card-text"><%= truncate(post.summary, :length => 135, :omission => "...", :escape => false) %></p>
         <a href="<%= buttercms_post_path(post.slug) %>" class="btn idea-btn pink">View Blog Post</a>
       </div>
     </div>
