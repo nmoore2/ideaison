@@ -28,6 +28,8 @@
       text-decoration: none;
   }
   .card {
+    transition: .25s ease-in-out;
+    
     cursor: pointer;
     margin-bottom: 40px;
     .card-img-top {
@@ -63,7 +65,6 @@
   }
   .card:hover {
     box-shadow: 5px 20px 50px 5px rgba(0, 0, 0, 0.3);
-    transition: .25s ease-in-out;
   }
 }
 .blog_detail {
