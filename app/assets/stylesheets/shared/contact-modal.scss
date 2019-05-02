@@ -101,7 +101,8 @@
   .contact-modal {
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
-    background-image: asset-url('bg/mobile-contact-bg-2.jpg');
+    background: asset-url('bg/mobile-contact-bg-2.jpg') bottom center no-repeat;
+    background-size: cover;
     .form-wrapper {
       min-width: 90%;
     }

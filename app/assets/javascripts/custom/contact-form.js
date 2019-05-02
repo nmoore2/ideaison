@@ -1,9 +1,9 @@
 $('.launch-contact-modal').on('click', function() {
-  $('.contact-modal').fadeIn();
+  $('.contact-modal').fadeIn('fast');
 });
 
 $('.contact-modal .close-icon').on('click', function() {
-  $('.contact-modal').fadeOut();
+  $('.contact-modal').fadeOut('fast');
 })
 $('form').floatinglabel();
 

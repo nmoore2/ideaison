@@ -237,8 +237,12 @@
 
 		// STICKY NAVBAR
 		$(window).on("scroll touchmove", function (e) {
-		$('.navbar').toggleClass('stick-me', $(document).scrollTop() > 1);
-
+			var $navBar = $('.navbar');
+			if ($(window).scrollTop() > 0) {
+				$navBar.addClass('stick-me');
+			} else {
+				$navBar.removeClass('stick-me');
+			}
 		});
 
 
