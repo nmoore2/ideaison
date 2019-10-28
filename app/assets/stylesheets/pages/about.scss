@@ -119,6 +119,11 @@ a.read-more {
   }
 }
 
+.page-info {
+  max-width: 690px;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 374px) {
   .titles .title-bg {
     margin-bottom: -161px;
