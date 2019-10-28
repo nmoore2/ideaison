@@ -245,8 +245,18 @@
 			}
 		});
 
+		var addScrollClass = () => {
+		 	var sT = $(window).scrollTop();
+			if (sT > 0) {
+				$('.navbar').addClass('stick-me');
+			} else {
+				$('.navbar').removeClass('stick-me');
+			}
+		};
 
+		addScrollClass();
 
+		$(window).on('scroll touchmove', addScrollClass);
 
 		// SWIPER SLIDER
 			var swiper = new Swiper('.swiper-slider', {
